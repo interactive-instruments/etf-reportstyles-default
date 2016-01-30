@@ -1,0 +1,85 @@
+///////////////////////////////////////////////////////////////////////////////////////
+//
+// ETF-ReportStyle
+//
+///////////////////////////////////////////////////////////////////////////////////////
+buildscript {
+    repositories {
+        maven {
+            url "http://services.interactive-instruments.de/etfdev-af/plugins-releases-local"
+            credentials {
+                username 'ii-bda'
+                password '6ozhS683'
+            }}
+        maven {
+            url "https://plugins.gradle.org/m2/"
+        }
+        jcenter()
+    }
+    dependencies {
+        classpath group: 'de.interactive_instruments.bda', name: 'etf-bda', version:'1.0.+'
+        classpath 'net.researchgate:gradle-release:2.3.4'
+        classpath "gradle.plugin.nl.javadude.gradle.plugins:license-gradle-plugin:0.12.1"
+    }
+    dependencies {
+        ant.unjar src: configurations.classpath.files.find {it.path.contains('etf')}, dest: 'build/gradle'
+    }
+}
+apply from: 'build/gradle/ii-bda.gradle'
+///////////////////////////////////////////////////////////////////////////////////////
+
+
+apply plugin: 'java'
+apply plugin: 'distribution'
+
+group = 'de.interactive_instruments.etf.reportstyle'
+description = 'ETF default report style'
+
+repositories {
+	mavenCentral()
+}
+
+dependencies {
+    testRuntime group: 'org.webjars', name: 'jquery-mobile', version:'1.4.5'
+}
+
+// task to extract dependencies
+task extractJs(type: Copy) {
+	from configurations.testRuntime.collect{zipTree (it)}
+	into 'js'
+	include '**/*.js'
+	include '**/*.css'
+	include '**/*.map'
+	include '**/*.gif'
+	include '**/*.svg'
+	include '**/*.png'
+	eachFile {details ->
+        def targetPath = normalizePath(details.path)
+        details.path = targetPath
+    }
+	includeEmptyDirs = false
+}
+
+def normalizePath(def path) {
+	// META-INF\resources\webjars\jquery-mobile\1.4.5\*.* -> *.*
+	def modified=path.replaceAll('META-INF/resources/webjars/[^/]*/[^/]*/(.*)', {"${it[1]}"})
+	return modified
+}
+
+jar {
+   baseName = 'etf-reportstyle-default'
+   from('src/main/resources/default') {
+     include '**/*.*'
+   }
+}
+
+distributions {
+    main {
+      baseName = 'etf-reportstyle-default'
+      contents {
+        from('src/main/resources/default') {
+          include '**/*.*'
+        }
+      }
+    }
+}

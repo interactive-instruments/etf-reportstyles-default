@@ -46,7 +46,7 @@ dependencies {
 // task to extract dependencies
 task extractJs(type: Copy) {
 	from configurations.testRuntime.collect{zipTree (it)}
-	into 'js'
+	into 'build/tmp/js'
 	include '**/*.js'
 	include '**/*.css'
 	include '**/*.map'

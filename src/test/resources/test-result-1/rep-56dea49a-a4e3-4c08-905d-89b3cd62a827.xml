@@ -1,0 +1,2287 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<etf:TestReport mv="0.5.7-SNAPSHOT" generator="ETF-SEL-1.3.6-SNAPSHOT" finalized="false"
+	id="56dea49a-a4e3-4c08-905d-89b3cd62a827"
+	xmlns:ii="http://www.interactive-instruments.de/ii/1.0"
+	xmlns:etf="http://www.interactive-instruments.de/etf/1.0">
+	<etf:ResultStatus>FAILED</etf:ResultStatus>
+	<etf:Duration>11475</etf:Duration>
+	<etf:StartTimestamp>2016-02-10T04:20:32.236+01:00</etf:StartTimestamp>
+	<etf:Label>Test run on 10.02.2016 - 04:20 with webservice Cite Simple Demo</etf:Label>
+	<etf:AppendixLocation>http://localhost:8080/reports/56dea49a-a4e3-4c08-905d-89b3cd62a827/appendices/</etf:AppendixLocation>
+	<etf:MachineName>jax.herrmann.cx</etf:MachineName>
+	<etf:PublicationLocation>file:/Users/USER/Projects/etf-local/env1/ds/obj/rep-56dea49a-a4e3-4c08-905d-89b3cd62a827.xml</etf:PublicationLocation>
+	<etf:TestObject mv="0.5.7-SNAPSHOT" id="390524fb-227f-45f4-a1af-19896f57d342">
+		<etf:VersionData>
+			<etf:Version>0.1.4</etf:Version>
+			<etf:CreationDate>2016-02-10T04:15:30.147+01:00</etf:CreationDate>
+			<etf:LastUpdateDate>2016-02-10T04:20:43.811+01:00</etf:LastUpdateDate>
+			<etf:Hash>FUbdt2Dvv70i77+977+9W++/vWcg77+9ce+/vQbvv70rLA==</etf:Hash>
+		</etf:VersionData>
+		<etf:Label>Cite Simple Demo</etf:Label>
+		<etf:Description>XtraServer 64</etf:Description>
+		<etf:Properties>
+			<ii:Items>
+				<ii:Item name="password">
+					<ii:value xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema"
+						xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+				</ii:Item>
+				<ii:Item name="username">
+					<ii:value xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema"
+						xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+				</ii:Item>
+			</ii:Items>
+		</etf:Properties>
+		<etf:TestObjectType>EXECUTABLE</etf:TestObjectType>
+		<etf:Resources>
+			<etf:Resource typeId="serviceEndpoint"
+				uri="http://services.interactive-instruments.de/cite-xs-46/simpledemo/cgi-bin/cities-postgresql/wfs?request=GetCapabilities&amp;service=wfs"
+			/>
+		</etf:Resources>
+	</etf:TestObject>
+	<etf:TestRunProperties>
+		<ii:Items>
+			<ii:Item/>
+		</ii:Items>
+	</etf:TestRunProperties>
+	<etf:Requirements>
+		<etf:Requirement id="c26f2069-7492-32fb-8eb0-6de07e3b1af8">
+			<etf:VersionData>
+				<etf:Hash>ejV0LQ==</etf:Hash>
+			</etf:VersionData>
+			<etf:Label>II-REQ##REQ-01</etf:Label>
+			<etf:Properties>
+				<ii:Items>
+					<ii:Item name="Description">
+						<ii:value xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema"
+							xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">l</ii:value>
+					</ii:Item>
+					<ii:Item name="Name">
+						<ii:value xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema"
+							xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">l</ii:value>
+					</ii:Item>
+				</ii:Items>
+			</etf:Properties>
+			<etf:SubRequirements/>
+		</etf:Requirement>
+	</etf:Requirements>
+	<etf:TestCases>
+		<etf:TestCase id="ebaff77f-8a64-4681-8bf3-9888a42fb2ed">
+			<etf:VersionData>
+				<etf:Version>1.0.0</etf:Version>
+				<etf:CreationDate>2016-02-10T04:20:38.133+01:00</etf:CreationDate>
+				<etf:LastUpdateDate>2016-02-10T04:20:38.133+01:00</etf:LastUpdateDate>
+				<etf:Hash/>
+			</etf:VersionData>
+			<etf:Label>AutoConfigure WFS</etf:Label>
+			<etf:Description>Technical test case. Parse GetCapabilities and DescribeFeatureType
+				responses for meta data and check the number of available Features. The gathered
+				information are used in other technical (scripted) test cases. In most cases ALL
+				other TestCases will fail if the TestSetup phase has not been
+				completed.</etf:Description>
+			<etf:Properties>
+				<ii:Items>
+					<ii:Item name="ShortDescription">
+						<ii:value xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema"
+							xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+					</ii:Item>
+					<ii:Item name="Author">
+						<ii:value xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema"
+							xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+							>USER</ii:value>
+					</ii:Item>
+					<ii:Item name="LastEditor">
+						<ii:value xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema"
+							xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+							>USER</ii:value>
+					</ii:Item>
+				</ii:Items>
+			</etf:Properties>
+			<etf:TestSteps>
+				<etf:TestStep id="c815437e-eabd-477b-8e87-10e3ae2fd93b">
+					<etf:VersionData>
+						<etf:Hash>RU2Ofg==</etf:Hash>
+					</etf:VersionData>
+					<etf:Label>Transfer_Properties (11)</etf:Label>
+					<etf:Description/>
+					<etf:Properties>
+						<ii:Items>
+							<ii:Item name="type">
+								<ii:value xsi:type="xs:string"
+									xmlns:xs="http://www.w3.org/2001/XMLSchema"
+									xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+									>WsdlPropertiesTestStep</ii:value>
+							</ii:Item>
+						</ii:Items>
+					</etf:Properties>
+				</etf:TestStep>
+				<etf:TestStep id="3ea87b60-25f6-46e2-9685-2e28b15c9cfe">
+					<etf:VersionData>
+						<etf:Hash>7FUsfg==</etf:Hash>
+					</etf:VersionData>
+					<etf:Label>GetCapabilities</etf:Label>
+					<etf:Description/>
+					<etf:Properties>
+						<ii:Items>
+							<ii:Item name="type">
+								<ii:value xsi:type="xs:string"
+									xmlns:xs="http://www.w3.org/2001/XMLSchema"
+									xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+									>HttpTestRequestStep</ii:value>
+							</ii:Item>
+						</ii:Items>
+					</etf:Properties>
+					<etf:TestObjectInput xsi:type="stringDataContainer" name="HttpRequest"
+						xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Endpoint:
+						http://services.interactive-instruments.de/cite-xs-46/simpledemo/cgi-bin/cities-postgresql/wfs?request=GetCapabilities&amp;service=wfs
+						request: GetCapabilities service: wfs version: 2.0.0 </etf:TestObjectInput>
+					<etf:Assertions>
+						<etf:Assertion id="29e5ab9e-3605-460d-bb8c-a91b5e5808f1">
+							<etf:VersionData>
+								<etf:Hash>tCwVrw==</etf:Hash>
+							</etf:VersionData>
+							<etf:Label>Expect no exception</etf:Label>
+							<etf:Properties>
+								<ii:Items/>
+							</etf:Properties>
+							<etf:Type>OwsExceptionReportAssertionImpl</etf:Type>
+							<etf:Expression>exists(/*:ServiceExceptionReport) or
+								exists(/*:ExceptionReport) or exists(/*:Exception)</etf:Expression>
+							<etf:ExpectedResult>false</etf:ExpectedResult>
+							<etf:Status>IMPLEMENTED</etf:Status>
+						</etf:Assertion>
+						<etf:Assertion id="690230da-965c-4149-a2b3-030799e44926">
+							<etf:VersionData>
+								<etf:Hash>mOKRvQ==</etf:Hash>
+							</etf:VersionData>
+							<etf:Label>At least one OutputFormat is listed</etf:Label>
+							<etf:Properties>
+								<ii:Items/>
+							</etf:Properties>
+							<etf:Type>XPathContainsAssertion</etf:Type>
+							<etf:Expression>if (exists(//*:FeatureType[1]/*:OutputFormats/*:Format))
+								then exists(//*:FeatureType[1]/*:OutputFormats/*:Format) else
+								exists(/*:WFS_Capabilities/*:OperationsMetadata/*:Operation[@name='GetFeature']/*:Parameter[@name='outputFormat']/*:Value)</etf:Expression>
+							<etf:ExpectedResult>true</etf:ExpectedResult>
+							<etf:Status>IMPLEMENTED</etf:Status>
+						</etf:Assertion>
+						<etf:Assertion id="96a027de-f87c-4326-924e-b3e4ab2e4666">
+							<etf:VersionData>
+								<etf:Hash>i2sFGA==</etf:Hash>
+							</etf:VersionData>
+							<etf:Label>Root element is FeatureCollection</etf:Label>
+							<etf:Properties>
+								<ii:Items/>
+							</etf:Properties>
+							<etf:Type>XPathContainsAssertion</etf:Type>
+							<etf:Expression>exists(/*:FeatureCollection)</etf:Expression>
+							<etf:ExpectedResult>true</etf:ExpectedResult>
+							<etf:Status>IMPLEMENTED</etf:Status>
+						</etf:Assertion>
+						<etf:Assertion id="a810d0ff-efb7-49c9-b147-168a237203dd">
+							<etf:VersionData>
+								<etf:Hash>AiTyUg==</etf:Hash>
+							</etf:VersionData>
+							<etf:Label>Check OutputFormats</etf:Label>
+							<etf:Properties>
+								<ii:Items/>
+							</etf:Properties>
+							<etf:Type>GroovyScriptAssertion</etf:Type>
+							<etf:Expression>import com.eviware.soapui.support.XmlHolder def holder =
+								new XmlHolder(messageExchange.responseContentAsXml) public class
+								OutputFormat { private String outputFormat; private FormatType type;
+								public OutputFormat() { } public OutputFormat(String outputFormat) {
+								log.info(outputFormat); this.outputFormat = outputFormat; this.type
+								= FormatType.UNKNOWN; if(outputFormat.indexOf("xml")!=-1 ||
+								outputFormat.indexOf("gml")!=-1) { type=FormatType.XML; }else
+								if(outputFormat.indexOf("json")!=-1) { type=FormatType.JSON; }else
+								if(outputFormat.indexOf("text")!=-1) { type=FormatType.TEXT; } }
+								public boolean equals(OutputFormat outputFormat) { return
+								this.getFormat().equals(outputFormat.getFormat()); } public String
+								toString() { return this.outputFormat; } public String getFormat() {
+								return this.outputFormat; } public boolean isParsable() { // JSON is
+								parsable as XML in SoapUI return (type==FormatType.XML ||
+								FormatType.JSON); } public boolean isText() { return
+								(type==FORMAT.TEXT); } } enum FormatType { UNKNOWN, TEXT, XML, JSON,
+								IMAGE }; TreeMap&lt;String, OutputFormat[]&gt; outputFormats = new
+								TreeMap&lt;String, OutputFormat[]&gt;(); String serviceTypeVersion;
+								void initOutputFormats(final XmlHolder capabilitiesXML) { final
+								String operationNameXPath=
+								"/*:WFS_Capabilities/*:OperationsMetadata/*:Operation/@name";
+								serviceTypeVersion =
+								capabilitiesXML.getNodeValue("/*:WFS_Capabilities/@version");
+								for(operationName in
+								capabilitiesXML.getNodeValues(operationNameXPath) ) { try { final
+								List&lt;String&gt; allOutputFormats =
+								getOperationParameterValues(capabilitiesXML, operationName,
+								"outputFormat"); log.info("Output: "+allOutputFormats); final
+								List&lt;OutputFormat&gt; ofList = new
+								ArrayList&lt;OutputFormat&gt;(); for(String o in
+								allOutputFormats.sort()) { ofList.add(new OutputFormat(o)); }
+								outputFormats.put(operationName, ofList.toArray(new
+								OutputFormat[0])); }catch(Exception e){ //Operation does not Provide
+								an outputFormat log.info("Exc: "+operationName); } } } String[]
+								getOperationParameterValues(final XmlHolder capabilitiesXML, final
+								String operation, final String parameter) { final String
+								operationXPath=
+								"/*:WFS_Capabilities/*:OperationsMetadata/*:Operation[@name=\""+
+								operation+"\"]"; String allowedValue="";
+								if(serviceTypeVersion=="2.0.0") allowedValue = "/*:AllowedValues";
+								final String owsValueXPath="/*:Parameter[@name=\""+parameter+"\"]"+
+								allowedValue+"/*:Value"; String[] values =
+								capabilitiesXML.getNodeValues(operationXPath+owsValueXPath);
+								log.info(operationXPath+owsValueXPath) if(values.size()==0) { throw
+								new Exception(this, "Unable to find \""+operation+"\""); } return
+								values; } initOutputFormats(holder); </etf:Expression>
+							<etf:ExpectedResult>!false</etf:ExpectedResult>
+							<etf:Status>IMPLEMENTED</etf:Status>
+						</etf:Assertion>
+						<etf:Assertion id="f13db00a-6be6-469e-a029-0946888b88fd">
+							<etf:VersionData>
+								<etf:Hash>EVqD/w==</etf:Hash>
+							</etf:VersionData>
+							<etf:Label>Namespace for first FeatureType can be resolved with
+								FeatureType name prefix</etf:Label>
+							<etf:Properties>
+								<ii:Items/>
+							</etf:Properties>
+							<etf:Type>XPathContainsAssertion</etf:Type>
+							<etf:Expression>exists(//*:FeatureType[1]/*:Name/namespace::*[name()=substring-before(//*:FeatureType[1]/*:Name,
+								':')])</etf:Expression>
+							<etf:ExpectedResult>true</etf:ExpectedResult>
+							<etf:Status>IMPLEMENTED</etf:Status>
+						</etf:Assertion>
+						<etf:Assertion id="fae048da-089d-4063-beac-c90253dec802">
+							<etf:VersionData>
+								<etf:Hash>5ac9Ww==</etf:Hash>
+							</etf:VersionData>
+							<etf:Label>No Exception or HTML</etf:Label>
+							<etf:Properties>
+								<ii:Items/>
+							</etf:Properties>
+							<etf:Type>XPathContainsAssertion</etf:Type>
+							<etf:Expression>exists(/*:ServiceExceptionReport) or
+								exists(/*:html)</etf:Expression>
+							<etf:ExpectedResult>false</etf:ExpectedResult>
+							<etf:Status>IMPLEMENTED</etf:Status>
+						</etf:Assertion>
+					</etf:Assertions>
+				</etf:TestStep>
+				<etf:TestStep id="b738ecb3-e252-4c56-8d91-8bb2e36314e1">
+					<etf:VersionData>
+						<etf:Hash>YZm3sw==</etf:Hash>
+					</etf:VersionData>
+					<etf:Label>Analyze WFS Capabilities</etf:Label>
+					<etf:Description>Technical step, used to analyze the service.</etf:Description>
+					<etf:Properties>
+						<ii:Items>
+							<ii:Item name="type">
+								<ii:value xsi:type="xs:string"
+									xmlns:xs="http://www.w3.org/2001/XMLSchema"
+									xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+									>WsdlGroovyScriptTestStep</ii:value>
+							</ii:Item>
+						</ii:Items>
+					</etf:Properties>
+				</etf:TestStep>
+				<etf:TestStep id="61d7f29c-ac56-42af-ae5e-5448ee1c7359">
+					<etf:VersionData>
+						<etf:Hash>rJPZwQ==</etf:Hash>
+					</etf:VersionData>
+					<etf:Label>Get Schema Definition</etf:Label>
+					<etf:Description>Get the schema</etf:Description>
+					<etf:Properties>
+						<ii:Items>
+							<ii:Item name="type">
+								<ii:value xsi:type="xs:string"
+									xmlns:xs="http://www.w3.org/2001/XMLSchema"
+									xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+									>HttpTestRequestStep</ii:value>
+							</ii:Item>
+						</ii:Items>
+					</etf:Properties>
+					<etf:TestObjectInput xsi:type="stringDataContainer" name="HttpRequest"
+						xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">service: wfs version:
+						2.0.0 request: DescribeFeatureType outputFormat: text/xml; subtype=gml/3.2.1 </etf:TestObjectInput>
+					<etf:Assertions>
+						<etf:Assertion id="a113f39f-81f2-4467-be8d-dd1892780f82">
+							<etf:VersionData>
+								<etf:Hash>ZPwmmg==</etf:Hash>
+							</etf:VersionData>
+							<etf:Label>Root element is Schema</etf:Label>
+							<etf:Properties>
+								<ii:Items/>
+							</etf:Properties>
+							<etf:Type>XPathContainsAssertion</etf:Type>
+							<etf:Expression>exists(/*:schema)</etf:Expression>
+							<etf:ExpectedResult>true</etf:ExpectedResult>
+							<etf:Status>IMPLEMENTED</etf:Status>
+						</etf:Assertion>
+						<etf:Assertion id="bb17ff5e-a967-4df7-a6ac-94b35c53e453">
+							<etf:VersionData>
+								<etf:Hash>b5mGhg==</etf:Hash>
+							</etf:VersionData>
+							<etf:Label>Expect no Exception</etf:Label>
+							<etf:Properties>
+								<ii:Items/>
+							</etf:Properties>
+							<etf:Type>XPathContainsAssertion</etf:Type>
+							<etf:Expression>exists(/*:ServiceExceptionReport) or
+								(/*:ExceptionReport)</etf:Expression>
+							<etf:ExpectedResult>false</etf:ExpectedResult>
+							<etf:Status>IMPLEMENTED</etf:Status>
+						</etf:Assertion>
+					</etf:Assertions>
+				</etf:TestStep>
+				<etf:TestStep id="035f1703-14ca-4d5c-88e9-9143a84327d8">
+					<etf:VersionData>
+						<etf:Hash>aAPZnA==</etf:Hash>
+					</etf:VersionData>
+					<etf:Label>Get number of Features in DB</etf:Label>
+					<etf:Description>GetFeature request with RESULTTYPE=hits</etf:Description>
+					<etf:Properties>
+						<ii:Items>
+							<ii:Item name="type">
+								<ii:value xsi:type="xs:string"
+									xmlns:xs="http://www.w3.org/2001/XMLSchema"
+									xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+									>HttpTestRequestStep</ii:value>
+							</ii:Item>
+						</ii:Items>
+					</etf:Properties>
+					<etf:TestObjectInput xsi:type="stringDataContainer" name="HttpRequest"
+						xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">SERVICE: wfs VERSION:
+						2.0.0 REQUEST: GetFeature RESULTTYPE: hits TYPENAMES: elf-gn:NamedPlace
+						OUTPUTFORMAT: text/xml; subtype=gml/3.2.1 NAMESPACES:
+						xmlns(elf-gn,http://www.locationframework.eu/schemas/GeographicalNames/1.0) </etf:TestObjectInput>
+					<etf:Assertions>
+						<etf:Assertion id="2b311676-82bb-48e9-b655-c7ae550565e6">
+							<etf:VersionData>
+								<etf:Hash>hSOHwA==</etf:Hash>
+							</etf:VersionData>
+							<etf:Label>Expect no Exception</etf:Label>
+							<etf:Properties>
+								<ii:Items/>
+							</etf:Properties>
+							<etf:Type>XPathContainsAssertion</etf:Type>
+							<etf:Expression>exists(/*:ServiceExceptionReport) or
+								(/*:ExceptionReport)</etf:Expression>
+							<etf:ExpectedResult>false</etf:ExpectedResult>
+							<etf:Status>IMPLEMENTED</etf:Status>
+						</etf:Assertion>
+						<etf:Assertion id="7caba3f1-af14-42dc-83f7-abb28b7927ac">
+							<etf:VersionData>
+								<etf:Hash>dWbxgg==</etf:Hash>
+							</etf:VersionData>
+							<etf:Label>Root element is FeatureCollection</etf:Label>
+							<etf:Properties>
+								<ii:Items/>
+							</etf:Properties>
+							<etf:Type>XPathContainsAssertion</etf:Type>
+							<etf:Expression>exists(/*:FeatureCollection)</etf:Expression>
+							<etf:ExpectedResult>true</etf:ExpectedResult>
+							<etf:Status>IMPLEMENTED</etf:Status>
+						</etf:Assertion>
+					</etf:Assertions>
+				</etf:TestStep>
+			</etf:TestSteps>
+		</etf:TestCase>
+		<etf:TestCase id="7db093a3-fcd4-46c5-8ef2-13601ffda2d3">
+			<etf:VersionData>
+				<etf:Version>1.0.0</etf:Version>
+				<etf:CreationDate>2016-02-10T04:20:38.142+01:00</etf:CreationDate>
+				<etf:LastUpdateDate>2016-02-10T04:20:38.142+01:00</etf:LastUpdateDate>
+				<etf:Hash/>
+			</etf:VersionData>
+			<etf:Label>Generate requests for each FeatureType</etf:Label>
+			<etf:Description>Technical test case. This test cases generates a GetFeature request for
+				each FeatureType and requests a number of Features. Afterwards requests are
+				generated for each unique resource in the FeatureCollection (except for Feature
+				references within the collection).</etf:Description>
+			<etf:Properties>
+				<ii:Items>
+					<ii:Item name="ShortDescription">
+						<ii:value xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema"
+							xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+					</ii:Item>
+					<ii:Item name="Author">
+						<ii:value xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema"
+							xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+							>USER</ii:value>
+					</ii:Item>
+					<ii:Item name="LastEditor">
+						<ii:value xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema"
+							xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+							>USER</ii:value>
+					</ii:Item>
+				</ii:Items>
+			</etf:Properties>
+			<etf:TestSteps>
+				<etf:TestStep id="3600144e-0d5e-4a8e-809c-ace4fb7f5928">
+					<etf:VersionData>
+						<etf:Hash>6oVKpw==</etf:Hash>
+					</etf:VersionData>
+					<etf:Label>Check service availability</etf:Label>
+					<etf:Description>Checks if the endpoint is still available</etf:Description>
+					<etf:Properties>
+						<ii:Items>
+							<ii:Item name="type">
+								<ii:value xsi:type="xs:string"
+									xmlns:xs="http://www.w3.org/2001/XMLSchema"
+									xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+									>WsdlRunTestCaseTestStep</ii:value>
+							</ii:Item>
+						</ii:Items>
+					</etf:Properties>
+				</etf:TestStep>
+				<etf:TestStep id="2d8a5731-5c42-4943-9fed-e0487df9ff40">
+					<etf:VersionData>
+						<etf:Hash>shIz2w==</etf:Hash>
+					</etf:VersionData>
+					<etf:Label>Transfer_Properties (8)</etf:Label>
+					<etf:Description/>
+					<etf:Properties>
+						<ii:Items>
+							<ii:Item name="type">
+								<ii:value xsi:type="xs:string"
+									xmlns:xs="http://www.w3.org/2001/XMLSchema"
+									xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+									>WsdlPropertiesTestStep</ii:value>
+							</ii:Item>
+						</ii:Items>
+					</etf:Properties>
+				</etf:TestStep>
+				<etf:TestStep id="bafce580-fca2-44a6-84d5-9adbbb8c9799">
+					<etf:VersionData>
+						<etf:Hash>Kbi+UQ==</etf:Hash>
+					</etf:VersionData>
+					<etf:Label>Request Features POST TMPL (disabled)</etf:Label>
+					<etf:Description>GetFeature request</etf:Description>
+					<etf:Properties>
+						<ii:Items>
+							<ii:Item name="type">
+								<ii:value xsi:type="xs:string"
+									xmlns:xs="http://www.w3.org/2001/XMLSchema"
+									xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+									>HttpTestRequestStep</ii:value>
+							</ii:Item>
+						</ii:Items>
+					</etf:Properties>
+					<etf:TestObjectInput xsi:type="stringDataContainer" name="HttpRequest"
+						xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">&lt;!--
+						RequestHeaders: --&gt; &lt;wfs:GetFeature service="WFS" version="2.0.0"
+						outputFormat="text/xml; subtype=gml/3.2.1" count="50"
+						xmlns:wfs="http://www.opengis.net/wfs/2.0"
+						xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"&gt; &lt;wfs:Query
+						typeNames="elf-gn:NamedPlace"
+						xmlns:elf-gn='http://www.locationframework.eu/schemas/GeographicalNames/1.0'
+						xmlns:base_3.3='http://inspire.ec.europa.eu/schemas/base/3.3'
+						xmlns:ns4='http://inspire.ec.europa.eu/schemas/gn/4.0'
+						xmlns:gmd='http://www.isotc211.org/2005/gmd'
+						xmlns:exr='http://www.opengis.net/gml/3.3/exr'
+						xmlns:gco='http://www.isotc211.org/2005/gco'
+						xmlns:gsr='http://www.isotc211.org/2005/gsr'
+						xmlns:gts='http://www.isotc211.org/2005/gts'
+						xmlns:gss='http://www.isotc211.org/2005/gss'
+						xmlns:gml_3.2='http://www.opengis.net/gml/3.2'
+						xmlns:xlink='http://www.w3.org/1999/xlink' /&gt;
+						&lt;/wfs:GetFeature&gt;</etf:TestObjectInput>
+					<etf:Assertions>
+						<etf:Assertion id="2473b96a-56ce-4ecf-ba3f-8ba6a728a43a">
+							<etf:VersionData>
+								<etf:Hash>z5Y4OQ==</etf:Hash>
+							</etf:VersionData>
+							<etf:Label>Schema is valid</etf:Label>
+							<etf:Properties>
+								<ii:Items/>
+							</etf:Properties>
+							<etf:Type>OwsExceptionReportAssertionImpl</etf:Type>
+							<etf:Expression>exists(/*:ServiceExceptionReport) or
+								exists(/*:ExceptionReport) or exists(/*:Exception)</etf:Expression>
+							<etf:ExpectedResult>false</etf:ExpectedResult>
+							<etf:Status>IMPLEMENTED</etf:Status>
+						</etf:Assertion>
+						<etf:Assertion id="96a027de-f87c-4326-924e-b3e4ab2e4666">
+							<etf:VersionData>
+								<etf:Hash>i2sFGA==</etf:Hash>
+							</etf:VersionData>
+							<etf:Label>Root element is FeatureCollection</etf:Label>
+							<etf:Properties>
+								<ii:Items/>
+							</etf:Properties>
+							<etf:Type>XPathContainsAssertion</etf:Type>
+							<etf:Expression>exists(/*:FeatureCollection)</etf:Expression>
+							<etf:ExpectedResult>true</etf:ExpectedResult>
+							<etf:Status>IMPLEMENTED</etf:Status>
+						</etf:Assertion>
+						<etf:Assertion id="aa024580-f466-4d43-985d-67a32e86745c">
+							<etf:VersionData>
+								<etf:Hash>fhirjw==</etf:Hash>
+							</etf:VersionData>
+							<etf:Label>Service does not return an Exception</etf:Label>
+							<etf:Properties>
+								<ii:Items/>
+							</etf:Properties>
+							<etf:Type>OwsExceptionReportAssertionImpl</etf:Type>
+							<etf:Expression>exists(/*:ServiceExceptionReport) or
+								exists(/*:ExceptionReport) or exists(/*:Exception)</etf:Expression>
+							<etf:ExpectedResult>false</etf:ExpectedResult>
+							<etf:Status>IMPLEMENTED</etf:Status>
+						</etf:Assertion>
+						<etf:Assertion id="cfcb513a-41ee-4308-b28d-d2dd4c74b5ca">
+							<etf:VersionData>
+								<etf:Hash>cSfUJg==</etf:Hash>
+							</etf:VersionData>
+							<etf:Label>Respond within 10 minutes</etf:Label>
+							<etf:Properties>
+								<ii:Items/>
+							</etf:Properties>
+							<etf:Type>ResponseSLAAssertion</etf:Type>
+							<etf:ExpectedResult>600000</etf:ExpectedResult>
+							<etf:Status>IMPLEMENTED</etf:Status>
+						</etf:Assertion>
+						<etf:Assertion id="e20d744c-308c-4707-8b7d-f951b9b3354d">
+							<etf:VersionData>
+								<etf:Hash>OrFRmQ==</etf:Hash>
+							</etf:VersionData>
+							<etf:Label>Non-URL references start with '#' and the ID exist in the
+								feature collection</etf:Label>
+							<etf:Properties>
+								<ii:Items/>
+							</etf:Properties>
+							<etf:Type>XQueryContainsAssertion</etf:Type>
+							<etf:Expression>&lt;result&gt; { for $reference in //@*:href return if (
+								starts-with($reference,'http://') or
+								starts-with($reference,'https://') or ( starts-with($reference, "#")
+								and exists(//.[@*:id=substring-after($reference,'#')]) )) then ""
+								else &lt;error&gt;Invalid reference: {data($reference) } does not
+								start with '#' or not found in document&lt;/error&gt; }
+								&lt;/result&gt;</etf:Expression>
+							<etf:ExpectedResult>&lt;result&gt;&lt;/result&gt;</etf:ExpectedResult>
+							<etf:Status>IMPLEMENTED</etf:Status>
+						</etf:Assertion>
+					</etf:Assertions>
+				</etf:TestStep>
+				<etf:TestStep id="cef00ffe-9fd7-42d6-bab7-09743212f41b">
+					<etf:VersionData>
+						<etf:Hash>Xgn2jA==</etf:Hash>
+					</etf:VersionData>
+					<etf:Label>Generate GetFeature requests</etf:Label>
+					<etf:Description>Generates for each FeatureType a GetFeature Request, with
+						COUNT=1000</etf:Description>
+					<etf:Properties>
+						<ii:Items>
+							<ii:Item name="type">
+								<ii:value xsi:type="xs:string"
+									xmlns:xs="http://www.w3.org/2001/XMLSchema"
+									xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+									>WsdlGroovyScriptTestStep</ii:value>
+							</ii:Item>
+						</ii:Items>
+					</etf:Properties>
+				</etf:TestStep>
+				<etf:TestStep id="6eb0f185-656a-408b-84d1-2607dad9d238">
+					<etf:VersionData>
+						<etf:Hash>Z5SpFw==</etf:Hash>
+					</etf:VersionData>
+					<etf:Label>Generate reference requests (disabled)</etf:Label>
+					<etf:Description>Generates for each reference URL a request</etf:Description>
+					<etf:Properties>
+						<ii:Items>
+							<ii:Item name="type">
+								<ii:value xsi:type="xs:string"
+									xmlns:xs="http://www.w3.org/2001/XMLSchema"
+									xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+									>WsdlGroovyScriptTestStep</ii:value>
+							</ii:Item>
+						</ii:Items>
+					</etf:Properties>
+				</etf:TestStep>
+				<etf:TestStep id="f2c53a83-461b-4bc2-be6e-038823516ac6">
+					<etf:VersionData>
+						<etf:Hash>7ZMppQ==</etf:Hash>
+					</etf:VersionData>
+					<etf:Label>Request reference TMPL (disabled)</etf:Label>
+					<etf:Description>Request a reference URL found in the
+						collection</etf:Description>
+					<etf:Properties>
+						<ii:Items>
+							<ii:Item name="type">
+								<ii:value xsi:type="xs:string"
+									xmlns:xs="http://www.w3.org/2001/XMLSchema"
+									xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+									>HttpTestRequestStep</ii:value>
+							</ii:Item>
+						</ii:Items>
+					</etf:Properties>
+					<etf:TestObjectInput xsi:type="stringDataContainer" name="HttpRequest"
+						xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+					<etf:Assertions>
+						<etf:Assertion id="19d6804c-08c8-441e-a382-82a2c43127b4">
+							<etf:VersionData>
+								<etf:Hash>9UyATQ==</etf:Hash>
+							</etf:VersionData>
+							<etf:Label>Expect no 403, 404, 500 or 503 HTTP response code</etf:Label>
+							<etf:Properties>
+								<ii:Items/>
+							</etf:Properties>
+							<etf:Type>InvalidHttpStatusCodesAssertion</etf:Type>
+							<etf:Expression>403, 404, 500, 503</etf:Expression>
+							<etf:ExpectedResult>false</etf:ExpectedResult>
+							<etf:Status>IMPLEMENTED</etf:Status>
+						</etf:Assertion>
+						<etf:Assertion id="f4835519-c036-4bdb-a8fa-641c29d2c8ff">
+							<etf:VersionData>
+								<etf:Hash>xZyQnw==</etf:Hash>
+							</etf:VersionData>
+							<etf:Label>Respond in 10 seconds</etf:Label>
+							<etf:Properties>
+								<ii:Items/>
+							</etf:Properties>
+							<etf:Type>ResponseSLAAssertion</etf:Type>
+							<etf:ExpectedResult>10000</etf:ExpectedResult>
+							<etf:Status>IMPLEMENTED</etf:Status>
+						</etf:Assertion>
+						<etf:Assertion id="fba8f343-cd90-4968-96b3-37f36bd6a864">
+							<etf:VersionData>
+								<etf:Hash>xwX+yQ==</etf:Hash>
+							</etf:VersionData>
+							<etf:Label>Expect no HTML root element</etf:Label>
+							<etf:Properties>
+								<ii:Items/>
+							</etf:Properties>
+							<etf:Type>XPathContainsAssertion</etf:Type>
+							<etf:Expression>exists(/*:html)</etf:Expression>
+							<etf:ExpectedResult>false</etf:ExpectedResult>
+							<etf:Status>IMPLEMENTED</etf:Status>
+						</etf:Assertion>
+					</etf:Assertions>
+				</etf:TestStep>
+			</etf:TestSteps>
+		</etf:TestCase>
+		<etf:TestCase id="cd1450b6-612e-426b-8f02-b505d5aa7de0">
+			<etf:VersionData>
+				<etf:Version>1.0.0</etf:Version>
+				<etf:CreationDate>2016-02-10T04:20:38.100+01:00</etf:CreationDate>
+				<etf:LastUpdateDate>2016-02-10T04:20:38.100+01:00</etf:LastUpdateDate>
+				<etf:Hash/>
+			</etf:VersionData>
+			<etf:Label>GetCapabilities is schema valid</etf:Label>
+			<etf:Description>Validate Capabilites response against
+				xsi:schemaLocation</etf:Description>
+			<etf:Properties>
+				<ii:Items>
+					<ii:Item name="ShortDescription">
+						<ii:value xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema"
+							xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+					</ii:Item>
+					<ii:Item name="Author">
+						<ii:value xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema"
+							xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+							>USER</ii:value>
+					</ii:Item>
+					<ii:Item name="LastEditor">
+						<ii:value xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema"
+							xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+							>USER</ii:value>
+					</ii:Item>
+				</ii:Items>
+			</etf:Properties>
+			<etf:TestSteps>
+				<etf:TestStep id="2eb390b2-6b75-4598-9003-c5dd7b2dd0aa">
+					<etf:VersionData>
+						<etf:Hash>/GufYQ==</etf:Hash>
+					</etf:VersionData>
+					<etf:Label>GetCapabilities</etf:Label>
+					<etf:Description/>
+					<etf:Properties>
+						<ii:Items>
+							<ii:Item name="type">
+								<ii:value xsi:type="xs:string"
+									xmlns:xs="http://www.w3.org/2001/XMLSchema"
+									xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+									>HttpTestRequestStep</ii:value>
+							</ii:Item>
+						</ii:Items>
+					</etf:Properties>
+					<etf:TestObjectInput xsi:type="stringDataContainer" name="HttpRequest"
+						xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Endpoint:
+						http://services.interactive-instruments.de/cite-xs-46/simpledemo/cgi-bin/cities-postgresql/wfs?request=GetCapabilities&amp;service=wfs
+						request: GetCapabilities version: 2.0.0 service: wfs </etf:TestObjectInput>
+					<etf:Assertions>
+						<etf:Assertion id="377ecd8e-bc4f-4810-bbfc-1fc26abd8aea">
+							<etf:VersionData>
+								<etf:Hash>CaxbbQ==</etf:Hash>
+							</etf:VersionData>
+							<etf:Label>Expect no exception</etf:Label>
+							<etf:Properties>
+								<ii:Items/>
+							</etf:Properties>
+							<etf:Type>OwsExceptionReportAssertionImpl</etf:Type>
+							<etf:Expression>exists(/*:ServiceExceptionReport) or
+								exists(/*:ExceptionReport) or exists(/*:Exception)</etf:Expression>
+							<etf:ExpectedResult>false</etf:ExpectedResult>
+							<etf:Status>IMPLEMENTED</etf:Status>
+						</etf:Assertion>
+						<etf:Assertion id="7ba7a86e-95d5-48ac-8232-6e8f15c01858">
+							<etf:VersionData>
+								<etf:Hash>qnNZuQ==</etf:Hash>
+							</etf:VersionData>
+							<etf:Label>Response validates against schema</etf:Label>
+							<etf:Properties>
+								<ii:Items/>
+							</etf:Properties>
+							<etf:Type>OwsExceptionReportAssertionImpl</etf:Type>
+							<etf:Expression>exists(/*:ServiceExceptionReport) or
+								exists(/*:ExceptionReport) or exists(/*:Exception)</etf:Expression>
+							<etf:ExpectedResult>false</etf:ExpectedResult>
+							<etf:Status>IMPLEMENTED</etf:Status>
+						</etf:Assertion>
+						<etf:Assertion id="efc49b77-73af-409e-b564-89e57a9f7726">
+							<etf:VersionData>
+								<etf:Hash>T1Bqsw==</etf:Hash>
+							</etf:VersionData>
+							<etf:Label>xsi:schemaLocation attribute exists</etf:Label>
+							<etf:Properties>
+								<ii:Items/>
+							</etf:Properties>
+							<etf:Type>XPathContainsAssertion</etf:Type>
+							<etf:Expression>exists(
+								/*:WFS_Capabilities/@*[local-name()='schemaLocation']
+								)</etf:Expression>
+							<etf:ExpectedResult>true</etf:ExpectedResult>
+							<etf:Status>IMPLEMENTED</etf:Status>
+						</etf:Assertion>
+					</etf:Assertions>
+				</etf:TestStep>
+			</etf:TestSteps>
+		</etf:TestCase>
+		<etf:TestCase id="9d3de01b-c84a-4bb4-86f4-c8e4296e2280">
+			<etf:VersionData>
+				<etf:Version>1.0.0</etf:Version>
+				<etf:CreationDate>2016-02-10T04:20:37.961+01:00</etf:CreationDate>
+				<etf:LastUpdateDate>2016-02-10T04:20:37.961+01:00</etf:LastUpdateDate>
+				<etf:Hash/>
+			</etf:VersionData>
+			<etf:Label>Init TestProject</etf:Label>
+			<etf:Description>Technical test case. Initialize loggers and set credentials for the
+				test run.</etf:Description>
+			<etf:Properties>
+				<ii:Items>
+					<ii:Item name="ShortDescription">
+						<ii:value xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema"
+							xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+					</ii:Item>
+					<ii:Item name="Author">
+						<ii:value xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema"
+							xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+							>USER</ii:value>
+					</ii:Item>
+					<ii:Item name="LastEditor">
+						<ii:value xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema"
+							xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+							>USER</ii:value>
+					</ii:Item>
+				</ii:Items>
+			</etf:Properties>
+			<etf:TestSteps>
+				<etf:TestStep id="a3bd8998-00db-4d57-88a4-75e7ab2c4b05">
+					<etf:VersionData>
+						<etf:Hash>N5cCAQ==</etf:Hash>
+					</etf:VersionData>
+					<etf:Label>Init TestProject</etf:Label>
+					<etf:Description/>
+					<etf:Properties>
+						<ii:Items>
+							<ii:Item name="type">
+								<ii:value xsi:type="xs:string"
+									xmlns:xs="http://www.w3.org/2001/XMLSchema"
+									xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+									>WsdlGroovyScriptTestStep</ii:value>
+							</ii:Item>
+						</ii:Items>
+					</etf:Properties>
+				</etf:TestStep>
+			</etf:TestSteps>
+		</etf:TestCase>
+		<etf:TestCase id="195d6c56-d4bf-4cdc-8af0-b34312e2d414">
+			<etf:VersionData>
+				<etf:Version>1.0.0</etf:Version>
+				<etf:CreationDate>2016-02-10T04:20:38.138+01:00</etf:CreationDate>
+				<etf:LastUpdateDate>2016-02-10T04:20:38.138+01:00</etf:LastUpdateDate>
+				<etf:Hash/>
+			</etf:VersionData>
+			<etf:Label>ObjectSaver (disabled)</etf:Label>
+			<etf:Description>Dieser Testfall wird lediglich für die Persistierung von XTF-OWSGTL
+				Objekten genutzt und ist deaktiviert.</etf:Description>
+			<etf:Properties>
+				<ii:Items>
+					<ii:Item name="ShortDescription">
+						<ii:value xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema"
+							xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+					</ii:Item>
+					<ii:Item name="Author">
+						<ii:value xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema"
+							xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+							>USER</ii:value>
+					</ii:Item>
+					<ii:Item name="LastEditor">
+						<ii:value xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema"
+							xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+							>USER</ii:value>
+					</ii:Item>
+				</ii:Items>
+			</etf:Properties>
+			<etf:TestSteps>
+				<etf:TestStep id="dccd37c1-7f55-43ca-8843-8aa6e0435a32">
+					<etf:VersionData>
+						<etf:Hash>okiDKw==</etf:Hash>
+					</etf:VersionData>
+					<etf:Label>TransientObjects (1)</etf:Label>
+					<etf:Description>This test step stores objects that can be accessed via the
+						de.interactive_instruments.ObjectSaver class.</etf:Description>
+					<etf:Properties>
+						<ii:Items>
+							<ii:Item name="type">
+								<ii:value xsi:type="xs:string"
+									xmlns:xs="http://www.w3.org/2001/XMLSchema"
+									xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+									>WsdlPropertiesTestStep</ii:value>
+							</ii:Item>
+						</ii:Items>
+					</etf:Properties>
+				</etf:TestStep>
+				<etf:TestStep id="99dd9326-161c-41ce-bcf8-e358a8581537">
+					<etf:VersionData>
+						<etf:Hash>ElQTvg==</etf:Hash>
+					</etf:VersionData>
+					<etf:Label>PersistentObjects (0)</etf:Label>
+					<etf:Description>This test step stores objects that can be accessed via the
+						de.interactive_instruments.ObjectSaver class.</etf:Description>
+					<etf:Properties>
+						<ii:Items>
+							<ii:Item name="type">
+								<ii:value xsi:type="xs:string"
+									xmlns:xs="http://www.w3.org/2001/XMLSchema"
+									xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+									>WsdlPropertiesTestStep</ii:value>
+							</ii:Item>
+						</ii:Items>
+					</etf:Properties>
+				</etf:TestStep>
+			</etf:TestSteps>
+		</etf:TestCase>
+		<etf:TestCase id="50c0315e-c52f-4c7a-abd5-2dd9e2fc505d">
+			<etf:VersionData>
+				<etf:Version>1.0.0</etf:Version>
+				<etf:CreationDate>2016-02-10T04:20:38.117+01:00</etf:CreationDate>
+				<etf:LastUpdateDate>2016-02-10T04:20:38.117+01:00</etf:LastUpdateDate>
+				<etf:Hash/>
+			</etf:VersionData>
+			<etf:Label>Operation endpoints are available</etf:Label>
+			<etf:Description>Check if the endpoints from the Capabilites are accesable and if basic
+				requirements are met to query the service.</etf:Description>
+			<etf:Properties>
+				<ii:Items>
+					<ii:Item name="ShortDescription">
+						<ii:value xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema"
+							xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+					</ii:Item>
+					<ii:Item name="Author">
+						<ii:value xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema"
+							xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+							>USER</ii:value>
+					</ii:Item>
+					<ii:Item name="LastEditor">
+						<ii:value xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema"
+							xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+							>USER</ii:value>
+					</ii:Item>
+				</ii:Items>
+			</etf:Properties>
+			<etf:TestSteps>
+				<etf:TestStep id="26a8636c-7978-4702-a1ac-6f9002e034f5">
+					<etf:VersionData>
+						<etf:Hash>KvznMQ==</etf:Hash>
+					</etf:VersionData>
+					<etf:Label>Transfer_Properties (4)</etf:Label>
+					<etf:Description/>
+					<etf:Properties>
+						<ii:Items>
+							<ii:Item name="type">
+								<ii:value xsi:type="xs:string"
+									xmlns:xs="http://www.w3.org/2001/XMLSchema"
+									xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+									>WsdlPropertiesTestStep</ii:value>
+							</ii:Item>
+						</ii:Items>
+					</etf:Properties>
+				</etf:TestStep>
+				<etf:TestStep id="dd8870f3-bd4c-42d4-b6ed-886a507eefd2">
+					<etf:VersionData>
+						<etf:Hash>pnsOmA==</etf:Hash>
+					</etf:VersionData>
+					<etf:Label>GetCapabilities</etf:Label>
+					<etf:Description>Request Capabilities, expect a Capabilites document is returned
+						which lists at least one usable FeatureType.</etf:Description>
+					<etf:Properties>
+						<ii:Items>
+							<ii:Item name="type">
+								<ii:value xsi:type="xs:string"
+									xmlns:xs="http://www.w3.org/2001/XMLSchema"
+									xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+									>HttpTestRequestStep</ii:value>
+							</ii:Item>
+						</ii:Items>
+					</etf:Properties>
+					<etf:TestObjectInput xsi:type="stringDataContainer" name="HttpRequest"
+						xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Endpoint:
+						http://services.interactive-instruments.de/cite-xs-46/simpledemo/cgi-bin/cities-postgresql/wfs?request=GetCapabilities&amp;service=wfs
+						request: GetCapabilities service: wfs version: 2.0.0 </etf:TestObjectInput>
+					<etf:Assertions>
+						<etf:Assertion id="086f89d1-d2f6-42a7-a206-2b290bfbbe22">
+							<etf:VersionData>
+								<etf:Hash>sR5vDg==</etf:Hash>
+							</etf:VersionData>
+							<etf:Label>OwsExceptionReportAssertion</etf:Label>
+							<etf:Properties>
+								<ii:Items/>
+							</etf:Properties>
+							<etf:Type>OwsExceptionReportAssertionImpl</etf:Type>
+							<etf:Expression>exists(/*:ServiceExceptionReport) or
+								exists(/*:ExceptionReport) or exists(/*:Exception)</etf:Expression>
+							<etf:ExpectedResult>false</etf:ExpectedResult>
+							<etf:Status>IMPLEMENTED</etf:Status>
+						</etf:Assertion>
+						<etf:Assertion id="1d24f09e-80f1-4692-aad1-21b481c8ba11">
+							<etf:VersionData>
+								<etf:Hash>bNReDw==</etf:Hash>
+							</etf:VersionData>
+							<etf:Label>No 403, 404, 500 or 503 HTTP status code is
+								returned</etf:Label>
+							<etf:Properties>
+								<ii:Items/>
+							</etf:Properties>
+							<etf:Type>InvalidHttpStatusCodesAssertion</etf:Type>
+							<etf:Expression>403, 404, 500, 503</etf:Expression>
+							<etf:ExpectedResult>false</etf:ExpectedResult>
+							<etf:Status>IMPLEMENTED</etf:Status>
+						</etf:Assertion>
+						<etf:Assertion id="7bb10bbb-f862-4052-97c4-058797a19ba0">
+							<etf:VersionData>
+								<etf:Hash>zLkaRw==</etf:Hash>
+							</etf:VersionData>
+							<etf:Label>At least one OutputFormat is listed</etf:Label>
+							<etf:Properties>
+								<ii:Items/>
+							</etf:Properties>
+							<etf:Type>XQueryContainsAssertion</etf:Type>
+							<etf:Expression>if (exists(//*:FeatureType[1]/*:OutputFormats/*:Format))
+								then exists(//*:FeatureType[1]/*:OutputFormats/*:Format) else
+								exists(/*:WFS_Capabilities/*:OperationsMetadata/*:Operation[@name='GetFeature']/*:Parameter[@name='outputFormat']/*:Value)</etf:Expression>
+							<etf:ExpectedResult>&lt;xml-fragment&gt;true&lt;/xml-fragment&gt;</etf:ExpectedResult>
+							<etf:Status>IMPLEMENTED</etf:Status>
+						</etf:Assertion>
+						<etf:Assertion id="9ef9bf16-5f7d-4335-b743-85f407c9ba37">
+							<etf:VersionData>
+								<etf:Hash>YwMYrA==</etf:Hash>
+							</etf:VersionData>
+							<etf:Label>At least one FeatureType is listed</etf:Label>
+							<etf:Properties>
+								<ii:Items/>
+							</etf:Properties>
+							<etf:Type>XPathContainsAssertion</etf:Type>
+							<etf:Expression>exists(//*:FeatureType[1])</etf:Expression>
+							<etf:ExpectedResult>true</etf:ExpectedResult>
+							<etf:Status>IMPLEMENTED</etf:Status>
+						</etf:Assertion>
+						<etf:Assertion id="a0d642fa-9690-4a3b-a9e1-7f168ba84ee8">
+							<etf:VersionData>
+								<etf:Hash>VGUfiQ==</etf:Hash>
+							</etf:VersionData>
+							<etf:Label>Expect Capabilities root element</etf:Label>
+							<etf:Properties>
+								<ii:Items/>
+							</etf:Properties>
+							<etf:Type>XPathContainsAssertion</etf:Type>
+							<etf:Expression>exists(/*:WFS_Capabilities) or
+								exists(/*:WMT_MS_Capabilities) or
+								exists(/*:WMS_Capabilities)</etf:Expression>
+							<etf:ExpectedResult>true</etf:ExpectedResult>
+							<etf:Status>IMPLEMENTED</etf:Status>
+						</etf:Assertion>
+						<etf:Assertion id="b5dfebab-7fc3-423f-a1c8-57b2b2154ef8">
+							<etf:VersionData>
+								<etf:Hash>MQ4Kpw==</etf:Hash>
+							</etf:VersionData>
+							<etf:Label>Namespace for first FeatureType can be resolved with
+								FeatureType name prefix</etf:Label>
+							<etf:Properties>
+								<ii:Items/>
+							</etf:Properties>
+							<etf:Type>XPathContainsAssertion</etf:Type>
+							<etf:Expression>exists(//*:FeatureType[1]/*:Name/namespace::*[name()=substring-before(//*:FeatureType[1]/*:Name,
+								':')])</etf:Expression>
+							<etf:ExpectedResult>true</etf:ExpectedResult>
+							<etf:Status>IMPLEMENTED</etf:Status>
+						</etf:Assertion>
+						<etf:Assertion id="f4835519-c036-4bdb-a8fa-641c29d2c8ff">
+							<etf:VersionData>
+								<etf:Hash>xZyQnw==</etf:Hash>
+							</etf:VersionData>
+							<etf:Label>Respond in 10 seconds</etf:Label>
+							<etf:Properties>
+								<ii:Items/>
+							</etf:Properties>
+							<etf:Type>ResponseSLAAssertion</etf:Type>
+							<etf:ExpectedResult>10000</etf:ExpectedResult>
+							<etf:Status>IMPLEMENTED</etf:Status>
+						</etf:Assertion>
+						<etf:Assertion id="fba8f343-cd90-4968-96b3-37f36bd6a864">
+							<etf:VersionData>
+								<etf:Hash>xwX+yQ==</etf:Hash>
+							</etf:VersionData>
+							<etf:Label>Expect no HTML root element</etf:Label>
+							<etf:Properties>
+								<ii:Items/>
+							</etf:Properties>
+							<etf:Type>XPathContainsAssertion</etf:Type>
+							<etf:Expression>exists(/*:html)</etf:Expression>
+							<etf:ExpectedResult>false</etf:ExpectedResult>
+							<etf:Status>IMPLEMENTED</etf:Status>
+						</etf:Assertion>
+					</etf:Assertions>
+				</etf:TestStep>
+				<etf:TestStep id="b8ecd382-b7e1-45e9-bd48-6914737d74a3">
+					<etf:VersionData>
+						<etf:Hash>Z4G9VQ==</etf:Hash>
+					</etf:VersionData>
+					<etf:Label>Select one FeatureType</etf:Label>
+					<etf:Description>Extract FeatureType name, namespace, namespace prefix and an
+						OutputFormat</etf:Description>
+					<etf:Properties>
+						<ii:Items>
+							<ii:Item name="type">
+								<ii:value xsi:type="xs:string"
+									xmlns:xs="http://www.w3.org/2001/XMLSchema"
+									xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+									>PropertyTransfersTestStep</ii:value>
+							</ii:Item>
+						</ii:Items>
+					</etf:Properties>
+				</etf:TestStep>
+				<etf:TestStep id="868fd5cd-bbc0-4e1e-8ec8-adc4a2b535e7">
+					<etf:VersionData>
+						<etf:Hash>Mb1q+g==</etf:Hash>
+					</etf:VersionData>
+					<etf:Label>Activate Operations</etf:Label>
+					<etf:Description/>
+					<etf:Properties>
+						<ii:Items>
+							<ii:Item name="type">
+								<ii:value xsi:type="xs:string"
+									xmlns:xs="http://www.w3.org/2001/XMLSchema"
+									xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+									>WsdlGroovyScriptTestStep</ii:value>
+							</ii:Item>
+						</ii:Items>
+					</etf:Properties>
+				</etf:TestStep>
+				<etf:TestStep id="d17afa66-5637-4bdb-9084-53df2f8a1d91">
+					<etf:VersionData>
+						<etf:Hash>qrpaIg==</etf:Hash>
+					</etf:VersionData>
+					<etf:Label>GetFeature</etf:Label>
+					<etf:Description>Request the first found FeatureType from the Capabilities to
+						check if the GetFeature endpoint is available</etf:Description>
+					<etf:Properties>
+						<ii:Items>
+							<ii:Item name="type">
+								<ii:value xsi:type="xs:string"
+									xmlns:xs="http://www.w3.org/2001/XMLSchema"
+									xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+									>HttpTestRequestStep</ii:value>
+							</ii:Item>
+						</ii:Items>
+					</etf:Properties>
+					<etf:TestObjectInput xsi:type="stringDataContainer" name="HttpRequest"
+						xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">SERVICE: wfs VERSION:
+						2.0.0 REQUEST: GetFeature RESULTTYPE: hits TYPENAMES: COUNT: 1 OUTPUTFORMAT:
+						NAMESPACES: xmlns(,) </etf:TestObjectInput>
+					<etf:Assertions>
+						<etf:Assertion id="0045a266-6fee-4b74-bcab-ad5c0ea54d2b">
+							<etf:VersionData>
+								<etf:Hash>s1FQmQ==</etf:Hash>
+							</etf:VersionData>
+							<etf:Label>No exception report</etf:Label>
+							<etf:Properties>
+								<ii:Items/>
+							</etf:Properties>
+							<etf:Type>OwsExceptionReportAssertionImpl</etf:Type>
+							<etf:Expression>exists(/*:ServiceExceptionReport) or
+								exists(/*:ExceptionReport) or exists(/*:Exception)</etf:Expression>
+							<etf:ExpectedResult>false</etf:ExpectedResult>
+							<etf:Status>IMPLEMENTED</etf:Status>
+						</etf:Assertion>
+						<etf:Assertion id="95146f31-741c-433a-a8f9-e984b5fe8b8c">
+							<etf:VersionData>
+								<etf:Hash>U0f5CA==</etf:Hash>
+							</etf:VersionData>
+							<etf:Label>No 403, 404, 500 or 503 HTTP status code is
+								returned</etf:Label>
+							<etf:Properties>
+								<ii:Items/>
+							</etf:Properties>
+							<etf:Type>InvalidHttpStatusCodesAssertion</etf:Type>
+							<etf:Expression>403, 404, 500, 503</etf:Expression>
+							<etf:ExpectedResult>false</etf:ExpectedResult>
+							<etf:Status>IMPLEMENTED</etf:Status>
+						</etf:Assertion>
+						<etf:Assertion id="b7be47fb-1c9a-4675-bfb1-18cd2bad4b27">
+							<etf:VersionData>
+								<etf:Hash>PVlbpQ==</etf:Hash>
+							</etf:VersionData>
+							<etf:Label>Root element is FeatureCollection</etf:Label>
+							<etf:Properties>
+								<ii:Items/>
+							</etf:Properties>
+							<etf:Type>XPathContainsAssertion</etf:Type>
+							<etf:Expression>exists(/*:FeatureCollection)</etf:Expression>
+							<etf:ExpectedResult>true</etf:ExpectedResult>
+							<etf:Status>IMPLEMENTED</etf:Status>
+						</etf:Assertion>
+					</etf:Assertions>
+				</etf:TestStep>
+				<etf:TestStep id="26fef0b4-6c6e-4203-b2e3-0a579520c0a6">
+					<etf:VersionData>
+						<etf:Hash>oMgG+w==</etf:Hash>
+					</etf:VersionData>
+					<etf:Label>DescribeFeatureType</etf:Label>
+					<etf:Description>Request the first found OutputFormat from the Capabilities to
+						check if the DescribeFeatureType endpoint is available</etf:Description>
+					<etf:Properties>
+						<ii:Items>
+							<ii:Item name="type">
+								<ii:value xsi:type="xs:string"
+									xmlns:xs="http://www.w3.org/2001/XMLSchema"
+									xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+									>HttpTestRequestStep</ii:value>
+							</ii:Item>
+						</ii:Items>
+					</etf:Properties>
+					<etf:TestObjectInput xsi:type="stringDataContainer" name="HttpRequest"
+						xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">service: wfs version:
+						2.0.0 request: DescribeFeatureType outputFormat: </etf:TestObjectInput>
+					<etf:Assertions>
+						<etf:Assertion id="a0fac5c6-b798-45ce-8669-dfb6c1fb866d">
+							<etf:VersionData>
+								<etf:Hash>5gQpnw==</etf:Hash>
+							</etf:VersionData>
+							<etf:Label>No 403, 404, 500 or 503 HTTP status code is
+								returned</etf:Label>
+							<etf:Properties>
+								<ii:Items/>
+							</etf:Properties>
+							<etf:Type>InvalidHttpStatusCodesAssertion</etf:Type>
+							<etf:Expression>403, 404, 500, 503</etf:Expression>
+							<etf:ExpectedResult>false</etf:ExpectedResult>
+							<etf:Status>IMPLEMENTED</etf:Status>
+						</etf:Assertion>
+						<etf:Assertion id="a113f39f-81f2-4467-be8d-dd1892780f82">
+							<etf:VersionData>
+								<etf:Hash>ZPwmmg==</etf:Hash>
+							</etf:VersionData>
+							<etf:Label>Root element is Schema</etf:Label>
+							<etf:Properties>
+								<ii:Items/>
+							</etf:Properties>
+							<etf:Type>XPathContainsAssertion</etf:Type>
+							<etf:Expression>exists(/*:schema)</etf:Expression>
+							<etf:ExpectedResult>true</etf:ExpectedResult>
+							<etf:Status>IMPLEMENTED</etf:Status>
+						</etf:Assertion>
+						<etf:Assertion id="db8b4839-cfcd-462d-8c7b-661d9fbb8983">
+							<etf:VersionData>
+								<etf:Hash>lWD/Ag==</etf:Hash>
+							</etf:VersionData>
+							<etf:Label>OwsExceptionReportAssertion</etf:Label>
+							<etf:Properties>
+								<ii:Items/>
+							</etf:Properties>
+							<etf:Type>OwsExceptionReportAssertionImpl</etf:Type>
+							<etf:Expression>exists(/*:ServiceExceptionReport) or
+								exists(/*:ExceptionReport) or exists(/*:Exception)</etf:Expression>
+							<etf:ExpectedResult>false</etf:ExpectedResult>
+							<etf:Status>IMPLEMENTED</etf:Status>
+						</etf:Assertion>
+					</etf:Assertions>
+				</etf:TestStep>
+				<etf:TestStep id="93b9c5d0-d093-4a3a-aa59-85ebe2e4d27b">
+					<etf:VersionData>
+						<etf:Hash>FzEpuw==</etf:Hash>
+					</etf:VersionData>
+					<etf:Label>GetMap (disabled)</etf:Label>
+					<etf:Description/>
+					<etf:Properties>
+						<ii:Items>
+							<ii:Item name="type">
+								<ii:value xsi:type="xs:string"
+									xmlns:xs="http://www.w3.org/2001/XMLSchema"
+									xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+									>HttpTestRequestStep</ii:value>
+							</ii:Item>
+						</ii:Items>
+					</etf:Properties>
+					<etf:TestObjectInput xsi:type="stringDataContainer" name="HttpRequest"
+						xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+					<etf:Assertions>
+						<etf:Assertion id="832e69d1-07bf-49dd-89a4-26c0365a4c31">
+							<etf:VersionData>
+								<etf:Hash>GKVMmA==</etf:Hash>
+							</etf:VersionData>
+							<etf:Label>Invalid HTTP Status Codes</etf:Label>
+							<etf:Properties>
+								<ii:Items/>
+							</etf:Properties>
+							<etf:Type>InvalidHttpStatusCodesAssertion</etf:Type>
+							<etf:Expression>403, 404, 500, 503</etf:Expression>
+							<etf:ExpectedResult>false</etf:ExpectedResult>
+							<etf:Status>IMPLEMENTED</etf:Status>
+						</etf:Assertion>
+					</etf:Assertions>
+				</etf:TestStep>
+				<etf:TestStep id="e8ec1b94-f15a-440d-aa3a-c0dcfb3e6c8d">
+					<etf:VersionData>
+						<etf:Hash>mX+Xxw==</etf:Hash>
+					</etf:VersionData>
+					<etf:Label>GetFeatureInfo (disabled)</etf:Label>
+					<etf:Description/>
+					<etf:Properties>
+						<ii:Items>
+							<ii:Item name="type">
+								<ii:value xsi:type="xs:string"
+									xmlns:xs="http://www.w3.org/2001/XMLSchema"
+									xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+									>HttpTestRequestStep</ii:value>
+							</ii:Item>
+						</ii:Items>
+					</etf:Properties>
+					<etf:TestObjectInput xsi:type="stringDataContainer" name="HttpRequest"
+						xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+					<etf:Assertions>
+						<etf:Assertion id="1c79f946-b8e2-4e08-a6d9-f1dcaeeeae66">
+							<etf:VersionData>
+								<etf:Hash>9EW60w==</etf:Hash>
+							</etf:VersionData>
+							<etf:Label>Invalid HTTP Status Codes</etf:Label>
+							<etf:Properties>
+								<ii:Items/>
+							</etf:Properties>
+							<etf:Type>InvalidHttpStatusCodesAssertion</etf:Type>
+							<etf:Expression>403, 404, 500, 503</etf:Expression>
+							<etf:ExpectedResult>false</etf:ExpectedResult>
+							<etf:Status>IMPLEMENTED</etf:Status>
+						</etf:Assertion>
+					</etf:Assertions>
+				</etf:TestStep>
+			</etf:TestSteps>
+		</etf:TestCase>
+		<etf:TestCase id="65ccaf8e-a648-4420-9ea8-fe6f80fb0aae">
+			<etf:VersionData>
+				<etf:Version>1.0.0</etf:Version>
+				<etf:CreationDate>2016-02-10T04:20:38.139+01:00</etf:CreationDate>
+				<etf:LastUpdateDate>2016-02-10T04:20:38.139+01:00</etf:LastUpdateDate>
+				<etf:Hash/>
+			</etf:VersionData>
+			<etf:Label>Requirements (disabled)</etf:Label>
+			<etf:Description>Load Requirements file.</etf:Description>
+			<etf:Properties>
+				<ii:Items>
+					<ii:Item name="ShortDescription">
+						<ii:value xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema"
+							xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+					</ii:Item>
+					<ii:Item name="Author">
+						<ii:value xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema"
+							xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+							>USER</ii:value>
+					</ii:Item>
+					<ii:Item name="LastEditor">
+						<ii:value xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema"
+							xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+							>USER</ii:value>
+					</ii:Item>
+				</ii:Items>
+			</etf:Properties>
+			<etf:TestSteps>
+				<etf:TestStep id="8f30751d-4639-47a1-a4f1-f7017877d578">
+					<etf:VersionData>
+						<etf:Hash>FFMmGw==</etf:Hash>
+					</etf:VersionData>
+					<etf:Label>Requirements (disabled)</etf:Label>
+					<etf:Description/>
+					<etf:Properties>
+						<ii:Items>
+							<ii:Item name="type">
+								<ii:value xsi:type="xs:string"
+									xmlns:xs="http://www.w3.org/2001/XMLSchema"
+									xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+									>WsdlGroovyScriptTestStep</ii:value>
+							</ii:Item>
+						</ii:Items>
+					</etf:Properties>
+				</etf:TestStep>
+			</etf:TestSteps>
+		</etf:TestCase>
+		<etf:TestCase id="7a9c4927-bb81-4238-93c1-6f7136064967">
+			<etf:VersionData>
+				<etf:Version>1.0.0</etf:Version>
+				<etf:CreationDate>2016-02-10T04:20:37.966+01:00</etf:CreationDate>
+				<etf:LastUpdateDate>2016-02-10T04:20:37.966+01:00</etf:LastUpdateDate>
+				<etf:Hash/>
+			</etf:VersionData>
+			<etf:Label>Service is available</etf:Label>
+			<etf:Description>Check if the service is available.</etf:Description>
+			<etf:Properties>
+				<ii:Items>
+					<ii:Item name="ShortDescription">
+						<ii:value xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema"
+							xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+					</ii:Item>
+					<ii:Item name="Author">
+						<ii:value xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema"
+							xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+							>USER</ii:value>
+					</ii:Item>
+					<ii:Item name="LastEditor">
+						<ii:value xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema"
+							xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+							>USER</ii:value>
+					</ii:Item>
+				</ii:Items>
+			</etf:Properties>
+			<etf:TestSteps>
+				<etf:TestStep id="0b4a0774-b736-4a94-b447-67f46dc210da">
+					<etf:VersionData>
+						<etf:Hash>IU6BdA==</etf:Hash>
+					</etf:VersionData>
+					<etf:Label>GetCapabilities</etf:Label>
+					<etf:Description/>
+					<etf:Properties>
+						<ii:Items>
+							<ii:Item name="type">
+								<ii:value xsi:type="xs:string"
+									xmlns:xs="http://www.w3.org/2001/XMLSchema"
+									xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+									>HttpTestRequestStep</ii:value>
+							</ii:Item>
+						</ii:Items>
+					</etf:Properties>
+					<etf:TestObjectInput xsi:type="stringDataContainer" name="HttpRequest"
+						xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Endpoint:
+						http://services.interactive-instruments.de/cite-xs-46/simpledemo/cgi-bin/cities-postgresql/wfs?request=GetCapabilities&amp;service=wfs
+						request: GetCapabilities service: wfs version: 2.0.0 </etf:TestObjectInput>
+					<etf:Assertions>
+						<etf:Assertion id="5a66cca5-e4de-468e-9eff-5c37d6ae88ef">
+							<etf:VersionData>
+								<etf:Hash>tQJ5Ww==</etf:Hash>
+							</etf:VersionData>
+							<etf:Label>Expect Capabilites in requested version</etf:Label>
+							<etf:Properties>
+								<ii:Items/>
+							</etf:Properties>
+							<etf:Type>XPathContainsAssertion</etf:Type>
+							<etf:Expression>/*/@version</etf:Expression>
+							<etf:ExpectedResult/>
+							<etf:Status>IMPLEMENTED</etf:Status>
+						</etf:Assertion>
+						<etf:Assertion id="74438b8c-ef10-4bf7-85ca-23e2544d0de3">
+							<etf:VersionData>
+								<etf:Hash>2fjDcw==</etf:Hash>
+							</etf:VersionData>
+							<etf:Label>Expect Capabilities root element</etf:Label>
+							<etf:Properties>
+								<ii:Items/>
+							</etf:Properties>
+							<etf:Type>XPathContainsAssertion</etf:Type>
+							<etf:Expression>exists(/*:WFS_Capabilities) or
+								exists(/*:WMT_MS_Capabilities) or
+								exists(/*:WMS_Capabilities)</etf:Expression>
+							<etf:ExpectedResult>true</etf:ExpectedResult>
+							<etf:Status>IMPLEMENTED</etf:Status>
+						</etf:Assertion>
+						<etf:Assertion id="befdb812-5725-403d-bc81-678b76c63f29">
+							<etf:VersionData>
+								<etf:Hash>+lRdiQ==</etf:Hash>
+							</etf:VersionData>
+							<etf:Label>OwsExceptionReportAssertion</etf:Label>
+							<etf:Properties>
+								<ii:Items/>
+							</etf:Properties>
+							<etf:Type>OwsExceptionReportAssertionImpl</etf:Type>
+							<etf:Expression>exists(/*:ServiceExceptionReport) or
+								exists(/*:ExceptionReport) or exists(/*:Exception)</etf:Expression>
+							<etf:ExpectedResult>false</etf:ExpectedResult>
+							<etf:Status>IMPLEMENTED</etf:Status>
+						</etf:Assertion>
+						<etf:Assertion id="c74169b2-9491-4fda-bd58-262b937cd1c3">
+							<etf:VersionData>
+								<etf:Hash>QtHj0w==</etf:Hash>
+							</etf:VersionData>
+							<etf:Label>Invalid HTTP Status Codes</etf:Label>
+							<etf:Properties>
+								<ii:Items/>
+							</etf:Properties>
+							<etf:Type>InvalidHttpStatusCodesAssertion</etf:Type>
+							<etf:Expression>403, 404, 500, 503</etf:Expression>
+							<etf:ExpectedResult>false</etf:ExpectedResult>
+							<etf:Status>IMPLEMENTED</etf:Status>
+						</etf:Assertion>
+						<etf:Assertion id="f4835519-c036-4bdb-a8fa-641c29d2c8ff">
+							<etf:VersionData>
+								<etf:Hash>xZyQnw==</etf:Hash>
+							</etf:VersionData>
+							<etf:Label>Respond in 10 seconds</etf:Label>
+							<etf:Properties>
+								<ii:Items/>
+							</etf:Properties>
+							<etf:Type>ResponseSLAAssertion</etf:Type>
+							<etf:ExpectedResult>10000</etf:ExpectedResult>
+							<etf:Status>IMPLEMENTED</etf:Status>
+						</etf:Assertion>
+						<etf:Assertion id="fba8f343-cd90-4968-96b3-37f36bd6a864">
+							<etf:VersionData>
+								<etf:Hash>xwX+yQ==</etf:Hash>
+							</etf:VersionData>
+							<etf:Label>Expect no HTML root element</etf:Label>
+							<etf:Properties>
+								<ii:Items/>
+							</etf:Properties>
+							<etf:Type>XPathContainsAssertion</etf:Type>
+							<etf:Expression>exists(/*:html)</etf:Expression>
+							<etf:ExpectedResult>false</etf:ExpectedResult>
+							<etf:Status>IMPLEMENTED</etf:Status>
+						</etf:Assertion>
+					</etf:Assertions>
+				</etf:TestStep>
+				<etf:TestStep id="9be1bb22-e354-40d4-b4a7-13b3358edf2a">
+					<etf:VersionData>
+						<etf:Hash>8stZMg==</etf:Hash>
+					</etf:VersionData>
+					<etf:Label>Transfer Capabilities, service and version</etf:Label>
+					<etf:Description/>
+					<etf:Properties>
+						<ii:Items>
+							<ii:Item name="type">
+								<ii:value xsi:type="xs:string"
+									xmlns:xs="http://www.w3.org/2001/XMLSchema"
+									xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+									>PropertyTransfersTestStep</ii:value>
+							</ii:Item>
+						</ii:Items>
+					</etf:Properties>
+				</etf:TestStep>
+			</etf:TestSteps>
+		</etf:TestCase>
+		<etf:TestCase id="1fd1fdc7-9bda-40a5-bb12-bb6fc75af694">
+			<etf:VersionData>
+				<etf:Version>1.0.0</etf:Version>
+				<etf:CreationDate>2016-02-10T04:20:38.112+01:00</etf:CreationDate>
+				<etf:LastUpdateDate>2016-02-10T04:20:38.112+01:00</etf:LastUpdateDate>
+				<etf:Hash/>
+			</etf:VersionData>
+			<etf:Label>Service supports FeatureType or Layer (disabled)</etf:Label>
+			<etf:Description>Prüfen, ob die über die Variablen checkSupportOf.featureTypes /
+				checkSupportOf.layers definierten FeatureTypes oder Layers in den Capabilities
+				vorhandenen sind.</etf:Description>
+			<etf:Properties>
+				<ii:Items>
+					<ii:Item name="ShortDescription">
+						<ii:value xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema"
+							xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+					</ii:Item>
+					<ii:Item name="Author">
+						<ii:value xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema"
+							xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+							>USER</ii:value>
+					</ii:Item>
+					<ii:Item name="LastEditor">
+						<ii:value xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema"
+							xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+							>USER</ii:value>
+					</ii:Item>
+				</ii:Items>
+			</etf:Properties>
+			<etf:TestSteps>
+				<etf:TestStep id="000fbf9a-ea72-4be9-a02f-c84859097cbe">
+					<etf:VersionData>
+						<etf:Hash>o3EpmQ==</etf:Hash>
+					</etf:VersionData>
+					<etf:Label>GetCapabilities</etf:Label>
+					<etf:Description/>
+					<etf:Properties>
+						<ii:Items>
+							<ii:Item name="type">
+								<ii:value xsi:type="xs:string"
+									xmlns:xs="http://www.w3.org/2001/XMLSchema"
+									xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+									>HttpTestRequestStep</ii:value>
+							</ii:Item>
+						</ii:Items>
+					</etf:Properties>
+					<etf:TestObjectInput xsi:type="stringDataContainer" name="HttpRequest"
+						xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Endpoint:
+						http://services.interactive-instruments.de/cite-xs-46/simpledemo/cgi-bin/cities-postgresql/wfs?request=GetCapabilities&amp;service=wfs
+						request: GetCapabilities service: wfs version: 2.0.0 </etf:TestObjectInput>
+					<etf:Assertions>
+						<etf:Assertion id="74438b8c-ef10-4bf7-85ca-23e2544d0de3">
+							<etf:VersionData>
+								<etf:Hash>2fjDcw==</etf:Hash>
+							</etf:VersionData>
+							<etf:Label>Expect Capabilities root element</etf:Label>
+							<etf:Properties>
+								<ii:Items/>
+							</etf:Properties>
+							<etf:Type>XPathContainsAssertion</etf:Type>
+							<etf:Expression>exists(/*:WFS_Capabilities) or
+								exists(/*:WMT_MS_Capabilities) or
+								exists(/*:WMS_Capabilities)</etf:Expression>
+							<etf:ExpectedResult>true</etf:ExpectedResult>
+							<etf:Status>IMPLEMENTED</etf:Status>
+						</etf:Assertion>
+						<etf:Assertion id="ca0eb513-9090-413e-a259-02d13a1f571a">
+							<etf:VersionData>
+								<etf:Hash>6VMSjQ==</etf:Hash>
+							</etf:VersionData>
+							<etf:Label>FeatureType or Layer exist</etf:Label>
+							<etf:Properties>
+								<ii:Items/>
+							</etf:Properties>
+							<etf:Type>GroovyScriptAssertion</etf:Type>
+							<etf:Expression>import com.eviware.soapui.support.XmlHolder; def capXml
+								= new XmlHolder(messageExchange.getResponseContentAsXml()); boolean
+								wfsCapabilities =
+								capXml.getNodeValue("exists(/*:WFS_Capabilities)").equals("true");
+								String projectVar = null; String xpath = null; if(wfsCapabilities) {
+								projectVar = ''; xpath =
+								"/*:WFS_Capabilities/*:FeatureTypeList/*:FeatureType/*:Name=";
+								}else{ projectVar = ''; xpath = "//*:Layer/*:Name="; } String
+								elementList=context.expand(projectVar); if(elementList!=null
+								&amp;&amp; !elementList.trim().equals("") ) { String[]
+								elements=elementList.split(','); for(e in elements) { String element
+								= e.trim(); if(!element.equals("")) { boolean doNotExist =
+								capXml.getNodeValue(xpath+"'"+element+"'").equals("false");
+								if(doNotExist) { throw new Exception("\""+element+"\" not found in
+								Capabilities!"); }else{ log.info("\""+element+"\" found in
+								Capabilities!"); } } } } return true;</etf:Expression>
+							<etf:ExpectedResult>!false</etf:ExpectedResult>
+							<etf:Status>IMPLEMENTED</etf:Status>
+						</etf:Assertion>
+						<etf:Assertion id="d71b8e42-34c7-46f4-a741-cce0db24bbc2">
+							<etf:VersionData>
+								<etf:Hash>fvb5+Q==</etf:Hash>
+							</etf:VersionData>
+							<etf:Label>OwsExceptionReportAssertion</etf:Label>
+							<etf:Properties>
+								<ii:Items/>
+							</etf:Properties>
+							<etf:Type>OwsExceptionReportAssertionImpl</etf:Type>
+							<etf:Expression>exists(/*:ServiceExceptionReport) or
+								exists(/*:ExceptionReport) or exists(/*:Exception)</etf:Expression>
+							<etf:ExpectedResult>false</etf:ExpectedResult>
+							<etf:Status>IMPLEMENTED</etf:Status>
+						</etf:Assertion>
+						<etf:Assertion id="f4835519-c036-4bdb-a8fa-641c29d2c8ff">
+							<etf:VersionData>
+								<etf:Hash>xZyQnw==</etf:Hash>
+							</etf:VersionData>
+							<etf:Label>Respond in 10 seconds</etf:Label>
+							<etf:Properties>
+								<ii:Items/>
+							</etf:Properties>
+							<etf:Type>ResponseSLAAssertion</etf:Type>
+							<etf:ExpectedResult>10000</etf:ExpectedResult>
+							<etf:Status>IMPLEMENTED</etf:Status>
+						</etf:Assertion>
+						<etf:Assertion id="fba8f343-cd90-4968-96b3-37f36bd6a864">
+							<etf:VersionData>
+								<etf:Hash>xwX+yQ==</etf:Hash>
+							</etf:VersionData>
+							<etf:Label>Expect no HTML root element</etf:Label>
+							<etf:Properties>
+								<ii:Items/>
+							</etf:Properties>
+							<etf:Type>XPathContainsAssertion</etf:Type>
+							<etf:Expression>exists(/*:html)</etf:Expression>
+							<etf:ExpectedResult>false</etf:ExpectedResult>
+							<etf:Status>IMPLEMENTED</etf:Status>
+						</etf:Assertion>
+					</etf:Assertions>
+				</etf:TestStep>
+			</etf:TestSteps>
+		</etf:TestCase>
+		<etf:TestCase id="8b20ab67-5e69-42a2-9723-93b8ce9b1fb3">
+			<etf:VersionData>
+				<etf:Version>1.0.0</etf:Version>
+				<etf:CreationDate>2016-02-10T04:20:38.088+01:00</etf:CreationDate>
+				<etf:LastUpdateDate>2016-02-10T04:20:38.088+01:00</etf:LastUpdateDate>
+				<etf:Hash/>
+			</etf:VersionData>
+			<etf:Label>TestSetup completed and service is still running (disabled)</etf:Label>
+			<etf:Description>Check if the service is available.</etf:Description>
+			<etf:Properties>
+				<ii:Items>
+					<ii:Item name="ShortDescription">
+						<ii:value xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema"
+							xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+					</ii:Item>
+					<ii:Item name="Author">
+						<ii:value xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema"
+							xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+							>USER</ii:value>
+					</ii:Item>
+					<ii:Item name="LastEditor">
+						<ii:value xsi:type="xs:string" xmlns:xs="http://www.w3.org/2001/XMLSchema"
+							xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+							>USER</ii:value>
+					</ii:Item>
+				</ii:Items>
+			</etf:Properties>
+			<etf:TestSteps>
+				<etf:TestStep id="e550e5a4-5e32-4ce6-a16b-1a10d4805a60">
+					<etf:VersionData>
+						<etf:Hash>hOzwfg==</etf:Hash>
+					</etf:VersionData>
+					<etf:Label>GetCapabilities</etf:Label>
+					<etf:Description>Requests the Capabilities document to check if the service is
+						still up and running</etf:Description>
+					<etf:Properties>
+						<ii:Items>
+							<ii:Item name="type">
+								<ii:value xsi:type="xs:string"
+									xmlns:xs="http://www.w3.org/2001/XMLSchema"
+									xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+									>HttpTestRequestStep</ii:value>
+							</ii:Item>
+						</ii:Items>
+					</etf:Properties>
+					<etf:TestObjectInput xsi:type="stringDataContainer" name="HttpRequest"
+						xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Endpoint:
+						http://services.interactive-instruments.de/cite-xs-46/simpledemo/cgi-bin/cities-postgresql/wfs?request=GetCapabilities&amp;service=wfs
+						request: GetCapabilities service: wfs version: 2.0.0 </etf:TestObjectInput>
+					<etf:Assertions>
+						<etf:Assertion id="5a66cca5-e4de-468e-9eff-5c37d6ae88ef">
+							<etf:VersionData>
+								<etf:Hash>tQJ5Ww==</etf:Hash>
+							</etf:VersionData>
+							<etf:Label>Expect Capabilites in requested version</etf:Label>
+							<etf:Properties>
+								<ii:Items/>
+							</etf:Properties>
+							<etf:Type>XPathContainsAssertion</etf:Type>
+							<etf:Expression>/*/@version</etf:Expression>
+							<etf:ExpectedResult/>
+							<etf:Status>IMPLEMENTED</etf:Status>
+						</etf:Assertion>
+						<etf:Assertion id="74438b8c-ef10-4bf7-85ca-23e2544d0de3">
+							<etf:VersionData>
+								<etf:Hash>2fjDcw==</etf:Hash>
+							</etf:VersionData>
+							<etf:Label>Expect Capabilities root element</etf:Label>
+							<etf:Properties>
+								<ii:Items/>
+							</etf:Properties>
+							<etf:Type>XPathContainsAssertion</etf:Type>
+							<etf:Expression>exists(/*:WFS_Capabilities) or
+								exists(/*:WMT_MS_Capabilities) or
+								exists(/*:WMS_Capabilities)</etf:Expression>
+							<etf:ExpectedResult>true</etf:ExpectedResult>
+							<etf:Status>IMPLEMENTED</etf:Status>
+						</etf:Assertion>
+						<etf:Assertion id="befdb812-5725-403d-bc81-678b76c63f29">
+							<etf:VersionData>
+								<etf:Hash>+lRdiQ==</etf:Hash>
+							</etf:VersionData>
+							<etf:Label>OwsExceptionReportAssertion</etf:Label>
+							<etf:Properties>
+								<ii:Items/>
+							</etf:Properties>
+							<etf:Type>OwsExceptionReportAssertionImpl</etf:Type>
+							<etf:Expression>exists(/*:ServiceExceptionReport) or
+								exists(/*:ExceptionReport) or exists(/*:Exception)</etf:Expression>
+							<etf:ExpectedResult>false</etf:ExpectedResult>
+							<etf:Status>IMPLEMENTED</etf:Status>
+						</etf:Assertion>
+						<etf:Assertion id="c74169b2-9491-4fda-bd58-262b937cd1c3">
+							<etf:VersionData>
+								<etf:Hash>QtHj0w==</etf:Hash>
+							</etf:VersionData>
+							<etf:Label>Invalid HTTP Status Codes</etf:Label>
+							<etf:Properties>
+								<ii:Items/>
+							</etf:Properties>
+							<etf:Type>InvalidHttpStatusCodesAssertion</etf:Type>
+							<etf:Expression>403, 404, 500, 503</etf:Expression>
+							<etf:ExpectedResult>false</etf:ExpectedResult>
+							<etf:Status>IMPLEMENTED</etf:Status>
+						</etf:Assertion>
+						<etf:Assertion id="f4835519-c036-4bdb-a8fa-641c29d2c8ff">
+							<etf:VersionData>
+								<etf:Hash>xZyQnw==</etf:Hash>
+							</etf:VersionData>
+							<etf:Label>Respond in 10 seconds</etf:Label>
+							<etf:Properties>
+								<ii:Items/>
+							</etf:Properties>
+							<etf:Type>ResponseSLAAssertion</etf:Type>
+							<etf:ExpectedResult>10000</etf:ExpectedResult>
+							<etf:Status>IMPLEMENTED</etf:Status>
+						</etf:Assertion>
+						<etf:Assertion id="fba8f343-cd90-4968-96b3-37f36bd6a864">
+							<etf:VersionData>
+								<etf:Hash>xwX+yQ==</etf:Hash>
+							</etf:VersionData>
+							<etf:Label>Expect no HTML root element</etf:Label>
+							<etf:Properties>
+								<ii:Items/>
+							</etf:Properties>
+							<etf:Type>XPathContainsAssertion</etf:Type>
+							<etf:Expression>exists(/*:html)</etf:Expression>
+							<etf:ExpectedResult>false</etf:ExpectedResult>
+							<etf:Status>IMPLEMENTED</etf:Status>
+						</etf:Assertion>
+					</etf:Assertions>
+				</etf:TestStep>
+				<etf:TestStep id="156d524e-95d7-4999-ba57-7b4f8a33378e">
+					<etf:VersionData>
+						<etf:Hash>GKcdeg==</etf:Hash>
+					</etf:VersionData>
+					<etf:Label>Transfer Capabilities, service and version</etf:Label>
+					<etf:Description>Technical test step. Transfer basic data.</etf:Description>
+					<etf:Properties>
+						<ii:Items>
+							<ii:Item name="type">
+								<ii:value xsi:type="xs:string"
+									xmlns:xs="http://www.w3.org/2001/XMLSchema"
+									xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+									>PropertyTransfersTestStep</ii:value>
+							</ii:Item>
+						</ii:Items>
+					</etf:Properties>
+				</etf:TestStep>
+				<etf:TestStep id="4666c102-6dcc-4bad-970e-66523d6ed2f5">
+					<etf:VersionData>
+						<etf:Hash>xSyGAg==</etf:Hash>
+					</etf:VersionData>
+					<etf:Label>Check if TestSetup has been completed</etf:Label>
+					<etf:Description>Check if the auto configuration test case in the TestSetup
+						phase has been completed without errors. In most cases ALL other TestCases
+						will fail if the TestSetup phase has not been completed.</etf:Description>
+					<etf:Properties>
+						<ii:Items>
+							<ii:Item name="type">
+								<ii:value xsi:type="xs:string"
+									xmlns:xs="http://www.w3.org/2001/XMLSchema"
+									xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+									>WsdlGroovyScriptTestStep</ii:value>
+							</ii:Item>
+						</ii:Items>
+					</etf:Properties>
+				</etf:TestStep>
+			</etf:TestSteps>
+		</etf:TestCase>
+	</etf:TestCases>
+	<etf:TestSuiteResults>
+		<etf:TestSuiteResult id="75dff8fb-f9b2-4a5b-8d49-a0f3a9a89dd2">
+			<etf:ResultStatus>FAILED</etf:ResultStatus>
+			<etf:Duration>0</etf:Duration>
+			<etf:Label>TestSetup</etf:Label>
+			<etf:TestCaseResults>
+				<etf:TestCaseResult testCaseRef="9d3de01b-c84a-4bb4-86f4-c8e4296e2280"
+					id="3b4ea16d-d4d6-488a-b0dc-732aa14f7172">
+					<etf:ResultStatus>OK</etf:ResultStatus>
+					<etf:Duration>0</etf:Duration>
+					<etf:TestStepResults>
+						<etf:TestStepResult testStepRef="a3bd8998-00db-4d57-88a4-75e7ab2c4b05"
+							id="7c5d76a6-3f33-46ef-a163-faa93f4fe0e6">
+							<etf:ResultStatus>OK</etf:ResultStatus>
+							<etf:Duration>1719</etf:Duration>
+							<etf:StartTimestamp>2016-02-10T04:20:36.211+01:00</etf:StartTimestamp>
+							<etf:Messages/>
+						</etf:TestStepResult>
+					</etf:TestStepResults>
+				</etf:TestCaseResult>
+				<etf:TestCaseResult testCaseRef="7a9c4927-bb81-4238-93c1-6f7136064967"
+					id="1b22b609-e390-4e61-900f-365e817023df">
+					<etf:ResultStatus>OK</etf:ResultStatus>
+					<etf:Duration>0</etf:Duration>
+					<etf:TestStepResults>
+						<etf:TestStepResult testStepRef="0b4a0774-b736-4a94-b447-67f46dc210da"
+							id="0b69e14e-5d84-4d8d-8a61-f98eca194391">
+							<etf:ResultStatus>OK</etf:ResultStatus>
+							<etf:Duration>426</etf:Duration>
+							<etf:StartTimestamp>2016-02-10T04:20:38.209+01:00</etf:StartTimestamp>
+							<etf:Resource>http://services.interactive-instruments.de/cite-xs-46/simpledemo/cgi-bin/cities-postgresql/wfs?request=GetCapabilities&amp;service=wfs</etf:Resource>
+							<etf:TestObjectOutput xsi:type="urlReferenceContainer"
+								name="HttpResponse"
+								referenceURL="http://localhost:8080/reports/56dea49a-a4e3-4c08-905d-89b3cd62a827/appendices/d9a48522-6b27-45d3-a9ef-38157f79aee8"
+								loadDataOnDemand="false" size="22315"
+								xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+							<etf:AssertionResults>
+								<etf:AssertionResult
+									testAssertionRef="f4835519-c036-4bdb-a8fa-641c29d2c8ff"
+									id="e1a6e968-0eb3-455c-ac2f-d930cd2fbb9a">
+									<etf:ResultStatus>OK</etf:ResultStatus>
+									<etf:Duration>0</etf:Duration>
+								</etf:AssertionResult>
+								<etf:AssertionResult
+									testAssertionRef="fba8f343-cd90-4968-96b3-37f36bd6a864"
+									id="bfad45fb-82ed-45da-bde6-5dd04a65a526">
+									<etf:ResultStatus>OK</etf:ResultStatus>
+									<etf:Duration>0</etf:Duration>
+								</etf:AssertionResult>
+								<etf:AssertionResult
+									testAssertionRef="74438b8c-ef10-4bf7-85ca-23e2544d0de3"
+									id="e1b5f9a9-8c57-4035-a8ec-de28ddc88bd2">
+									<etf:ResultStatus>OK</etf:ResultStatus>
+									<etf:Duration>0</etf:Duration>
+								</etf:AssertionResult>
+								<etf:AssertionResult
+									testAssertionRef="befdb812-5725-403d-bc81-678b76c63f29"
+									id="41c687c6-1412-4cc8-9f3d-75579f06b33b">
+									<etf:ResultStatus>OK</etf:ResultStatus>
+									<etf:Duration>0</etf:Duration>
+								</etf:AssertionResult>
+								<etf:AssertionResult
+									testAssertionRef="c74169b2-9491-4fda-bd58-262b937cd1c3"
+									id="b45ac143-4a32-4c4c-b894-4288e73f1ab8">
+									<etf:ResultStatus>OK</etf:ResultStatus>
+									<etf:Duration>0</etf:Duration>
+								</etf:AssertionResult>
+								<etf:AssertionResult
+									testAssertionRef="5a66cca5-e4de-468e-9eff-5c37d6ae88ef"
+									id="33b6bf35-ce1a-47ce-a355-f7db4e6b3d18">
+									<etf:ResultStatus>OK</etf:ResultStatus>
+									<etf:Duration>0</etf:Duration>
+								</etf:AssertionResult>
+							</etf:AssertionResults>
+							<etf:Messages/>
+						</etf:TestStepResult>
+						<etf:TestStepResult testStepRef="9be1bb22-e354-40d4-b4a7-13b3358edf2a"
+							id="6a6fea77-472b-4ecf-9406-d3c6b79ec075">
+							<etf:ResultStatus>OK</etf:ResultStatus>
+							<etf:Duration>10</etf:Duration>
+							<etf:StartTimestamp>2016-02-10T04:20:40.368+01:00</etf:StartTimestamp>
+							<etf:Messages>
+								<etf:Message xsi:type="stringDataContainer" name="Message.1"
+									xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Performed
+									transfer [Capabilities]</etf:Message>
+								<etf:Message xsi:type="stringDataContainer" name="Message.2"
+									xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Performed
+									transfer [service]</etf:Message>
+								<etf:Message xsi:type="stringDataContainer" name="Message.3"
+									xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Performed
+									transfer [version]</etf:Message>
+							</etf:Messages>
+						</etf:TestStepResult>
+					</etf:TestStepResults>
+				</etf:TestCaseResult>
+				<etf:TestCaseResult testCaseRef="cd1450b6-612e-426b-8f02-b505d5aa7de0"
+					id="cce6cbe5-1f88-4ccf-ad14-48fac4738e9f">
+					<etf:ResultStatus>OK</etf:ResultStatus>
+					<etf:Duration>0</etf:Duration>
+					<etf:TestStepResults>
+						<etf:TestStepResult testStepRef="2eb390b2-6b75-4598-9003-c5dd7b2dd0aa"
+							id="90520f2e-e9c3-4ee2-bcb8-c5a652393513">
+							<etf:ResultStatus>OK</etf:ResultStatus>
+							<etf:Duration>47</etf:Duration>
+							<etf:StartTimestamp>2016-02-10T04:20:40.706+01:00</etf:StartTimestamp>
+							<etf:Resource>http://services.interactive-instruments.de/cite-xs-46/simpledemo/cgi-bin/cities-postgresql/wfs?request=GetCapabilities&amp;service=wfs</etf:Resource>
+							<etf:TestObjectOutput xsi:type="urlReferenceContainer"
+								name="HttpResponse"
+								referenceURL="http://localhost:8080/reports/56dea49a-a4e3-4c08-905d-89b3cd62a827/appendices/cb8cd4c9-1214-429a-a57c-2e88a80dd0c4"
+								loadDataOnDemand="false" size="22314"
+								xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+							<etf:AssertionResults>
+								<etf:AssertionResult
+									testAssertionRef="efc49b77-73af-409e-b564-89e57a9f7726"
+									id="841c66c8-60e1-4180-aa4b-aef752b02c3e">
+									<etf:ResultStatus>OK</etf:ResultStatus>
+									<etf:Duration>0</etf:Duration>
+								</etf:AssertionResult>
+								<etf:AssertionResult
+									testAssertionRef="7ba7a86e-95d5-48ac-8232-6e8f15c01858"
+									id="4bfca8cb-8810-48da-89a4-1e758b980373">
+									<etf:ResultStatus>OK</etf:ResultStatus>
+									<etf:Duration>0</etf:Duration>
+								</etf:AssertionResult>
+								<etf:AssertionResult
+									testAssertionRef="377ecd8e-bc4f-4810-bbfc-1fc26abd8aea"
+									id="6536f119-7715-4372-b11b-dbce893550ff">
+									<etf:ResultStatus>OK</etf:ResultStatus>
+									<etf:Duration>0</etf:Duration>
+								</etf:AssertionResult>
+							</etf:AssertionResults>
+							<etf:Messages/>
+						</etf:TestStepResult>
+					</etf:TestStepResults>
+				</etf:TestCaseResult>
+				<etf:TestCaseResult testCaseRef="50c0315e-c52f-4c7a-abd5-2dd9e2fc505d"
+					id="b73b0259-04cb-4bb6-a383-a5397025dc9f">
+					<etf:ResultStatus>FAILED</etf:ResultStatus>
+					<etf:Duration>0</etf:Duration>
+					<etf:TestStepResults>
+						<etf:TestStepResult testStepRef="26a8636c-7978-4702-a1ac-6f9002e034f5"
+							id="d476fabb-0d1c-40b2-a60b-fec6cbe24f22">
+							<etf:ResultStatus>OK</etf:ResultStatus>
+							<etf:Duration>37</etf:Duration>
+							<etf:StartTimestamp>2016-02-10T04:20:40.848+01:00</etf:StartTimestamp>
+							<etf:Messages/>
+						</etf:TestStepResult>
+						<etf:TestStepResult testStepRef="dd8870f3-bd4c-42d4-b6ed-886a507eefd2"
+							id="a39aca30-7040-48a3-985e-838db8901107">
+							<etf:ResultStatus>FAILED</etf:ResultStatus>
+							<etf:Duration>41</etf:Duration>
+							<etf:StartTimestamp>2016-02-10T04:20:40.887+01:00</etf:StartTimestamp>
+							<etf:Resource>http://services.interactive-instruments.de/cite-xs-46/simpledemo/cgi-bin/cities-postgresql/wfs?request=GetCapabilities&amp;service=wfs</etf:Resource>
+							<etf:TestObjectOutput xsi:type="urlReferenceContainer"
+								name="HttpResponse"
+								referenceURL="http://localhost:8080/reports/56dea49a-a4e3-4c08-905d-89b3cd62a827/appendices/5527012f-4354-4d74-983d-3a115ec4df1b"
+								loadDataOnDemand="false" size="22314"
+								xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+							<etf:AssertionResults>
+								<etf:AssertionResult
+									testAssertionRef="f4835519-c036-4bdb-a8fa-641c29d2c8ff"
+									id="55dca879-8c90-4975-9244-c3047187508f">
+									<etf:ResultStatus>OK</etf:ResultStatus>
+									<etf:Duration>0</etf:Duration>
+								</etf:AssertionResult>
+								<etf:AssertionResult
+									testAssertionRef="fba8f343-cd90-4968-96b3-37f36bd6a864"
+									id="64d1c5f1-2565-49b9-9b4c-157049fb9255">
+									<etf:ResultStatus>OK</etf:ResultStatus>
+									<etf:Duration>0</etf:Duration>
+								</etf:AssertionResult>
+								<etf:AssertionResult
+									testAssertionRef="a0d642fa-9690-4a3b-a9e1-7f168ba84ee8"
+									id="1e2d2595-96d3-4ecd-9597-3360a58d6156">
+									<etf:ResultStatus>OK</etf:ResultStatus>
+									<etf:Duration>0</etf:Duration>
+								</etf:AssertionResult>
+								<etf:AssertionResult
+									testAssertionRef="086f89d1-d2f6-42a7-a206-2b290bfbbe22"
+									id="98044c2d-ed7e-4f91-8a1f-0b9684891a24">
+									<etf:ResultStatus>OK</etf:ResultStatus>
+									<etf:Duration>0</etf:Duration>
+								</etf:AssertionResult>
+								<etf:AssertionResult
+									testAssertionRef="9ef9bf16-5f7d-4335-b743-85f407c9ba37"
+									id="2049a2e6-97e4-41a0-bfb1-82671e539b76">
+									<etf:ResultStatus>OK</etf:ResultStatus>
+									<etf:Duration>0</etf:Duration>
+								</etf:AssertionResult>
+								<etf:AssertionResult
+									testAssertionRef="b5dfebab-7fc3-423f-a1c8-57b2b2154ef8"
+									id="1c946b7b-6a71-499c-bacc-f2a7f2693d9d">
+									<etf:ResultStatus>OK</etf:ResultStatus>
+									<etf:Duration>0</etf:Duration>
+								</etf:AssertionResult>
+								<etf:AssertionResult
+									testAssertionRef="1d24f09e-80f1-4692-aad1-21b481c8ba11"
+									id="f1fb0dfb-b419-4697-85d2-677ecedeae42">
+									<etf:ResultStatus>OK</etf:ResultStatus>
+									<etf:Duration>0</etf:Duration>
+								</etf:AssertionResult>
+								<etf:AssertionResult
+									testAssertionRef="7bb10bbb-f862-4052-97c4-058797a19ba0"
+									id="bfa381f0-0ec5-4e87-8a63-cbf49aa6e11b">
+									<etf:ResultStatus>FAILED</etf:ResultStatus>
+									<etf:Duration>0</etf:Duration>
+									<etf:Messages>
+										<etf:Message xsi:type="stringDataContainer"
+											name="7bb10bbb-f862-4052-97c4-058797a19ba0"
+											xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+											>XQuery Match Assertion failed for path [if
+											(exists(//*:FeatureType[1]/*:OutputFormats/*:Format))
+											then exists(//*:FeatureType[1]/*:OutputFormats/*:Format)
+											else
+											exists(/*:WFS_Capabilities/*:OperationsMetadata/*:Operation[@name='GetFeature']/*:Parameter[@name='outputFormat']/*:Value)]
+											: Exception:org.custommonkey.xmlunit.Diff [different]
+											Expected text value 'true' but was 'false' - comparing
+											&lt;xml-fragment ...&gt;true&lt;/xml-fragment&gt; at
+											/xml-fragment[1]/text()[1] to &lt;xml-fragment
+											...&gt;false&lt;/xml-fragment&gt; at
+											/xml-fragment[1]/text()[1] </etf:Message>
+									</etf:Messages>
+								</etf:AssertionResult>
+							</etf:AssertionResults>
+							<etf:Messages>
+								<etf:Message xsi:type="stringDataContainer" name="Message.1"
+									xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">[At least
+									one OutputFormat is listed] XQuery Match Assertion failed for
+									path [if (exists(//*:FeatureType[1]/*:OutputFormats/*:Format))
+									then exists(//*:FeatureType[1]/*:OutputFormats/*:Format) else
+									exists(/*:WFS_Capabilities/*:OperationsMetadata/*:Operation[@name='GetFeature']/*:Parameter[@name='outputFormat']/*:Value)]
+									: Exception:org.custommonkey.xmlunit.Diff [different] Expected
+									text value 'true' but was 'false' - comparing &lt;xml-fragment
+									...&gt;true&lt;/xml-fragment&gt; at /xml-fragment[1]/text()[1]
+									to &lt;xml-fragment ...&gt;false&lt;/xml-fragment&gt; at
+									/xml-fragment[1]/text()[1] </etf:Message>
+							</etf:Messages>
+						</etf:TestStepResult>
+					</etf:TestStepResults>
+				</etf:TestCaseResult>
+				<etf:TestCaseResult testCaseRef="ebaff77f-8a64-4681-8bf3-9888a42fb2ed"
+					id="39b1f2e5-5e05-488f-b66d-eff6187b613a">
+					<etf:ResultStatus>FAILED</etf:ResultStatus>
+					<etf:Duration>0</etf:Duration>
+					<etf:TestStepResults>
+						<etf:TestStepResult testStepRef="3ea87b60-25f6-46e2-9685-2e28b15c9cfe"
+							id="e89c7b0b-3ecf-46b8-8cfa-6518f8733328">
+							<etf:ResultStatus>FAILED</etf:ResultStatus>
+							<etf:Duration>39</etf:Duration>
+							<etf:StartTimestamp>2016-02-10T04:20:41.446+01:00</etf:StartTimestamp>
+							<etf:Resource>http://services.interactive-instruments.de/cite-xs-46/simpledemo/cgi-bin/cities-postgresql/wfs?request=GetCapabilities&amp;service=wfs</etf:Resource>
+							<etf:TestObjectOutput xsi:type="urlReferenceContainer"
+								name="HttpResponse"
+								referenceURL="http://localhost:8080/reports/56dea49a-a4e3-4c08-905d-89b3cd62a827/appendices/1a5614f0-4146-4222-bda6-ca1845bccc52"
+								loadDataOnDemand="false" size="22314"
+								xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+							<etf:AssertionResults>
+								<etf:AssertionResult
+									testAssertionRef="fae048da-089d-4063-beac-c90253dec802"
+									id="8c577841-85d4-44bd-9630-dfc9f3890f71">
+									<etf:ResultStatus>OK</etf:ResultStatus>
+									<etf:Duration>0</etf:Duration>
+								</etf:AssertionResult>
+								<etf:AssertionResult
+									testAssertionRef="29e5ab9e-3605-460d-bb8c-a91b5e5808f1"
+									id="1b61dbce-f9f7-41bb-8882-f6e6500031a6">
+									<etf:ResultStatus>OK</etf:ResultStatus>
+									<etf:Duration>0</etf:Duration>
+								</etf:AssertionResult>
+								<etf:AssertionResult
+									testAssertionRef="96a027de-f87c-4326-924e-b3e4ab2e4666"
+									id="0fbbc1a4-958b-4125-81ad-fc85b990ed3f">
+									<etf:ResultStatus>OK</etf:ResultStatus>
+									<etf:Duration>0</etf:Duration>
+								</etf:AssertionResult>
+								<etf:AssertionResult
+									testAssertionRef="a810d0ff-efb7-49c9-b147-168a237203dd"
+									id="56c50625-9be1-4468-bbb3-d90e2a68f0bc">
+									<etf:ResultStatus>OK</etf:ResultStatus>
+									<etf:Duration>0</etf:Duration>
+								</etf:AssertionResult>
+								<etf:AssertionResult
+									testAssertionRef="f13db00a-6be6-469e-a029-0946888b88fd"
+									id="078a7f45-6fa9-48b3-a550-069c8b61ccd2">
+									<etf:ResultStatus>OK</etf:ResultStatus>
+									<etf:Duration>0</etf:Duration>
+								</etf:AssertionResult>
+								<etf:AssertionResult
+									testAssertionRef="690230da-965c-4149-a2b3-030799e44926"
+									id="8ef51755-c545-4723-a9ab-e132e93b3518">
+									<etf:ResultStatus>FAILED</etf:ResultStatus>
+									<etf:Duration>0</etf:Duration>
+									<etf:Messages>
+										<etf:Message xsi:type="stringDataContainer"
+											name="690230da-965c-4149-a2b3-030799e44926"
+											xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+											>XPathContains comparison failed for path [if
+											(exists(//*:FeatureType[1]/*:OutputFormats/*:Format))
+											then exists(//*:FeatureType[1]/*:OutputFormats/*:Format)
+											else
+											exists(/*:WFS_Capabilities/*:OperationsMetadata/*:Operation[@name='GetFeature']/*:Parameter[@name='outputFormat']/*:Value)],
+											expecting [true], actual was [false]</etf:Message>
+									</etf:Messages>
+								</etf:AssertionResult>
+							</etf:AssertionResults>
+							<etf:Messages>
+								<etf:Message xsi:type="stringDataContainer" name="Message.1"
+									xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">[At least
+									one OutputFormat is listed] XPathContains comparison failed for
+									path [if (exists(//*:FeatureType[1]/*:OutputFormats/*:Format))
+									then exists(//*:FeatureType[1]/*:OutputFormats/*:Format) else
+									exists(/*:WFS_Capabilities/*:OperationsMetadata/*:Operation[@name='GetFeature']/*:Parameter[@name='outputFormat']/*:Value)],
+									expecting [true], actual was [false]</etf:Message>
+							</etf:Messages>
+						</etf:TestStepResult>
+						<etf:TestStepResult testStepRef="b738ecb3-e252-4c56-8d91-8bb2e36314e1"
+							id="bd65b93e-ead1-4593-8af2-7425618bea64">
+							<etf:ResultStatus>FAILED</etf:ResultStatus>
+							<etf:Duration>617</etf:Duration>
+							<etf:StartTimestamp>2016-02-10T04:20:42.456+01:00</etf:StartTimestamp>
+							<etf:Messages>
+								<etf:Message xsi:type="stringDataContainer" name="Message.1"
+									xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Assertion
+									failed: assert "completed" == autoConfiguration | | | failed
+									false </etf:Message>
+								<etf:Message xsi:type="stringDataContainer" name="Message.2"
+									xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">error at
+									line: 22</etf:Message>
+							</etf:Messages>
+						</etf:TestStepResult>
+					</etf:TestStepResults>
+				</etf:TestCaseResult>
+			</etf:TestCaseResults>
+		</etf:TestSuiteResult>
+		<etf:TestSuiteResult id="f506b711-5fd2-439c-944e-04fd7b81a14a">
+			<etf:ResultStatus>FAILED</etf:ResultStatus>
+			<etf:Duration>0</etf:Duration>
+			<etf:Label>Check references in features</etf:Label>
+			<etf:TestCaseResults>
+				<etf:TestCaseResult testCaseRef="7db093a3-fcd4-46c5-8ef2-13601ffda2d3"
+					id="f72431e7-7532-47cd-9ad0-b2bfd596414f">
+					<etf:ResultStatus>FAILED</etf:ResultStatus>
+					<etf:Duration>0</etf:Duration>
+					<etf:TestStepResults>
+						<etf:TestStepResult testStepRef="3600144e-0d5e-4a8e-809c-ace4fb7f5928"
+							id="0775f9ac-7cad-4e4f-ad88-6a066e597fac">
+							<etf:ResultStatus>FAILED</etf:ResultStatus>
+							<etf:Duration>118</etf:Duration>
+							<etf:StartTimestamp>2016-02-10T04:20:43.090+01:00</etf:StartTimestamp>
+							<etf:Messages>
+								<etf:Message xsi:type="stringDataContainer" name="Message.1"
+									xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+									>GetCapabilities - OK - 42</etf:Message>
+								<etf:Message xsi:type="stringDataContainer" name="Message.2"
+									xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Transfer
+									Capabilities, service and version - OK - 1</etf:Message>
+								<etf:Message xsi:type="stringDataContainer" name="Message.3"
+									xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">-
+									Performed transfer [Capabilities]</etf:Message>
+								<etf:Message xsi:type="stringDataContainer" name="Message.4"
+									xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">-
+									Performed transfer [service]</etf:Message>
+								<etf:Message xsi:type="stringDataContainer" name="Message.5"
+									xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">-
+									Performed transfer [version]</etf:Message>
+								<etf:Message xsi:type="stringDataContainer" name="Message.6"
+									xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Check if
+									TestSetup has been completed - FAILED - 4</etf:Message>
+								<etf:Message xsi:type="stringDataContainer" name="Message.7"
+									xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">-
+									Assertion failed: assert "true" == autoConfigurationCompleted |
+									| | false false </etf:Message>
+								<etf:Message xsi:type="stringDataContainer" name="Message.8"
+									xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">- error at
+									line: 8</etf:Message>
+							</etf:Messages>
+						</etf:TestStepResult>
+						<etf:TestStepResult testStepRef="2d8a5731-5c42-4943-9fed-e0487df9ff40"
+							id="8afeb8b7-0ff5-414d-a393-bdd7e50172f8">
+							<etf:ResultStatus>OK</etf:ResultStatus>
+							<etf:Duration>0</etf:Duration>
+							<etf:StartTimestamp>2016-02-10T04:20:43.395+01:00</etf:StartTimestamp>
+							<etf:Messages/>
+						</etf:TestStepResult>
+						<etf:TestStepResult testStepRef="cef00ffe-9fd7-42d6-bab7-09743212f41b"
+							id="96a3114b-46fc-4155-a006-5c1fa6bc6c7f">
+							<etf:ResultStatus>FAILED</etf:ResultStatus>
+							<etf:Duration>313</etf:Duration>
+							<etf:StartTimestamp>2016-02-10T04:20:43.396+01:00</etf:StartTimestamp>
+							<etf:Messages>
+								<etf:Message xsi:type="stringDataContainer" name="Message.1"
+									xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Assertion
+									failed: assert "true" == autoConfigurationCompleted | | | false
+									false </etf:Message>
+								<etf:Message xsi:type="stringDataContainer" name="Message.2"
+									xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">error at
+									line: 11</etf:Message>
+							</etf:Messages>
+						</etf:TestStepResult>
+					</etf:TestStepResults>
+				</etf:TestCaseResult>
+				<etf:TestCaseResult testCaseRef="8b20ab67-5e69-42a2-9723-93b8ce9b1fb3"
+					id="b54eacab-e887-46c5-81b7-2c576c360499">
+					<etf:ResultStatus>FAILED</etf:ResultStatus>
+					<etf:Duration>0</etf:Duration>
+					<etf:TestStepResults>
+						<etf:TestStepResult testStepRef="e550e5a4-5e32-4ce6-a16b-1a10d4805a60"
+							id="b25bebea-fbd5-45aa-87e7-c70cd6fe351c">
+							<etf:ResultStatus>OK</etf:ResultStatus>
+							<etf:Duration>42</etf:Duration>
+							<etf:StartTimestamp>2016-02-10T04:20:43.282+01:00</etf:StartTimestamp>
+							<etf:Resource>http://services.interactive-instruments.de/cite-xs-46/simpledemo/cgi-bin/cities-postgresql/wfs?request=GetCapabilities&amp;service=wfs</etf:Resource>
+							<etf:TestObjectOutput xsi:type="urlReferenceContainer"
+								name="HttpResponse"
+								referenceURL="http://localhost:8080/reports/56dea49a-a4e3-4c08-905d-89b3cd62a827/appendices/46e2d456-3645-4e91-80f2-f1d5e72662ac"
+								loadDataOnDemand="false" size="22314"
+								xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+							<etf:AssertionResults>
+								<etf:AssertionResult
+									testAssertionRef="f4835519-c036-4bdb-a8fa-641c29d2c8ff"
+									id="ea1e0bd4-712f-44be-a75d-9fa5aceaef6c">
+									<etf:ResultStatus>OK</etf:ResultStatus>
+									<etf:Duration>0</etf:Duration>
+								</etf:AssertionResult>
+								<etf:AssertionResult
+									testAssertionRef="fba8f343-cd90-4968-96b3-37f36bd6a864"
+									id="4bbda528-b6f7-42e9-8ace-6150361df4af">
+									<etf:ResultStatus>OK</etf:ResultStatus>
+									<etf:Duration>0</etf:Duration>
+								</etf:AssertionResult>
+								<etf:AssertionResult
+									testAssertionRef="74438b8c-ef10-4bf7-85ca-23e2544d0de3"
+									id="783c54e3-667e-4736-b74b-771b3a7357a1">
+									<etf:ResultStatus>OK</etf:ResultStatus>
+									<etf:Duration>0</etf:Duration>
+								</etf:AssertionResult>
+								<etf:AssertionResult
+									testAssertionRef="befdb812-5725-403d-bc81-678b76c63f29"
+									id="b6dd2e93-ae38-4e83-ad83-af097628f555">
+									<etf:ResultStatus>OK</etf:ResultStatus>
+									<etf:Duration>0</etf:Duration>
+								</etf:AssertionResult>
+								<etf:AssertionResult
+									testAssertionRef="c74169b2-9491-4fda-bd58-262b937cd1c3"
+									id="419b776c-c1eb-403d-8568-9f74f865ffc4">
+									<etf:ResultStatus>OK</etf:ResultStatus>
+									<etf:Duration>0</etf:Duration>
+								</etf:AssertionResult>
+								<etf:AssertionResult
+									testAssertionRef="5a66cca5-e4de-468e-9eff-5c37d6ae88ef"
+									id="8297f639-902c-4c58-9c91-523c8a6b3f44">
+									<etf:ResultStatus>OK</etf:ResultStatus>
+									<etf:Duration>0</etf:Duration>
+								</etf:AssertionResult>
+							</etf:AssertionResults>
+							<etf:Messages/>
+						</etf:TestStepResult>
+						<etf:TestStepResult testStepRef="156d524e-95d7-4999-ba57-7b4f8a33378e"
+							id="70a0ce93-487b-40cb-8424-fd7eef56f30c">
+							<etf:ResultStatus>OK</etf:ResultStatus>
+							<etf:Duration>1</etf:Duration>
+							<etf:StartTimestamp>2016-02-10T04:20:43.381+01:00</etf:StartTimestamp>
+							<etf:Messages>
+								<etf:Message xsi:type="stringDataContainer" name="Message.1"
+									xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Performed
+									transfer [Capabilities]</etf:Message>
+								<etf:Message xsi:type="stringDataContainer" name="Message.2"
+									xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Performed
+									transfer [service]</etf:Message>
+								<etf:Message xsi:type="stringDataContainer" name="Message.3"
+									xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Performed
+									transfer [version]</etf:Message>
+							</etf:Messages>
+						</etf:TestStepResult>
+						<etf:TestStepResult testStepRef="4666c102-6dcc-4bad-970e-66523d6ed2f5"
+							id="7a5c9abe-7bc0-4218-8a57-18403113b58a">
+							<etf:ResultStatus>FAILED</etf:ResultStatus>
+							<etf:Duration>4</etf:Duration>
+							<etf:StartTimestamp>2016-02-10T04:20:43.385+01:00</etf:StartTimestamp>
+							<etf:Messages>
+								<etf:Message xsi:type="stringDataContainer" name="Message.1"
+									xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Assertion
+									failed: assert "true" == autoConfigurationCompleted | | | false
+									false </etf:Message>
+								<etf:Message xsi:type="stringDataContainer" name="Message.2"
+									xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">error at
+									line: 8</etf:Message>
+							</etf:Messages>
+						</etf:TestStepResult>
+					</etf:TestStepResults>
+				</etf:TestCaseResult>
+			</etf:TestCaseResults>
+		</etf:TestSuiteResult>
+	</etf:TestSuiteResults>
+</etf:TestReport>

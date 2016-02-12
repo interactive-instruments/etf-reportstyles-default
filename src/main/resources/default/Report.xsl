@@ -590,8 +590,8 @@
     <xsl:if
      test="$TestStep/etf:TestObjectInput/text() or $TestStep/etf:TestObjectInput/@referenceURL">
      <div class="Request">
-      <xsl:if test="$FailedAssertionCount = 0">
-       <xsl:attribute name="DoNotShowInSimpleView"/>
+      <xsl:if test="$FailedAssertionCount=0">
+       <xsl:attribute name="class">DoNotShowInSimpleView</xsl:attribute>
       </xsl:if>
       <xsl:apply-templates select="$TestStep/etf:TestObjectInput"/>
      </div>
@@ -599,7 +599,10 @@
 
 
     <!-- Response -->
-    <div class="Response DoNotShowInSimpleView">
+    <div class="Response">
+     <xsl:if test="$FailedAssertionCount=0">
+      <xsl:attribute name="class">DoNotShowInSimpleView</xsl:attribute>
+     </xsl:if>
      <xsl:apply-templates select="./etf:TestObjectOutput"/>
     </div>
 
@@ -754,11 +757,13 @@
     </xsl:choose>
    </xsl:if>
 
-   <div class="ReportDetail Expression">
+   <div class="DoNotShowInSimpleView Expression">
+    <xsl:if test="$TestAssertion/etf:Expression">
     <label for="{$id}.expression"><xsl:value-of select="$lang/x:e[@key = 'Expression']"/>:</label>
     <textarea id="{$id}.expression" class="Expression" data-mini="true">
      <xsl:value-of select="$TestAssertion/etf:Expression"/>
     </textarea>
+    </xsl:if>
    </div>
 
    <xsl:if test="$TestAssertion/etf:ExpectedResult/text()">
@@ -1053,12 +1058,13 @@
   </fieldset-->
   <div class="Container UrlReferenceContainer">
    <xsl:variable name="sizeMb">
-    <xsl:if test="./@size > 1"> (<xsl:value-of select="format-number(./@size div 1048576, '0.00')"/>
+    <xsl:if test="./@size > 16384"> (<xsl:value-of select="format-number(./@size div 1048576, '0.00')"/>
      MB) </xsl:if>
    </xsl:variable>
    <xsl:variable name="referenceURL" select="@referenceURL"/>
    <a href="{$referenceURL}" data-ajax="false" target="_blank">Open <xsl:value-of select="./@name"/>
-    <xsl:value-of select="$sizeMb"/></a>
+    <xsl:if test="./@size > 16384"><xsl:value-of select="$sizeMb"/></xsl:if>
+   </a>
   </div>
  </xsl:template>
 

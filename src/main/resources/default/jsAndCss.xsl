@@ -10,32 +10,55 @@
 		<xsl:text>../resources/ii</xsl:text>
 	</xsl:variable>
 	<xsl:param name="stylePath" select="$defaultStyleResourcePath"></xsl:param>
+	
 	<xsl:variable name="defaultJqueryResourcePath">
 		<xsl:text>../resources/ii</xsl:text>
 	</xsl:variable>
 	<xsl:param name="jqueryPath" select="$defaultJqueryResourcePath"></xsl:param>
+	
 	<xsl:variable name="defaultBaseUrl">
 		<xsl:text>/</xsl:text>
 	</xsl:variable>
 	<xsl:param name="baseUrl" select="$defaultBaseUrl"></xsl:param>
 	
+	<xsl:variable name="defaultCssDirectInlcuding">
+		<xsl:text>true</xsl:text>
+	</xsl:variable>
+	<xsl:param name="cssDirectInlcuding" select="$defaultCssDirectInlcuding"></xsl:param>
+	
 	<!-- JQuery Mobile and Styling includes-->
 	<!-- ########################################################################################## -->
 	<xsl:template name="jsfdeclAndCss">
 		<meta charset="utf-8"/>
-		<link rel="stylesheet" href="{$stylePath}/de.interactive-instruments.min.css"/>
-		<link rel="stylesheet" href="{$stylePath}/de.interactive-instruments.rep.css"/>
+		
+		<xsl:choose>
+			<xsl:when test="$cssDirectInlcuding ='true'">
+				<style type="text/css">
+					<xsl:value-of select="document(concat($stylePath,'/de.interactive-instruments.min.css'))" disable-output-escaping="yes" />
+				</style>
+				
+				<style type="text/css">
+					<xsl:value-of select="document(concat($stylePath,'/de.interactive-instruments.rep.css'))" disable-output-escaping="yes" />
+				</style>
+			</xsl:when>
+			<xsl:otherwise>
+				<link rel="stylesheet" href="{$stylePath}/de.interactive-instruments.min.css"/>
+				<link rel="stylesheet" href="{$stylePath}/de.interactive-instruments.rep.css"/>
+			</xsl:otherwise>
+		</xsl:choose>
+	
 		
 		<link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/jquerymobile/1.4.5/jquery.mobile.min.css" />
 		<script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.11.3.min.js"></script>
+		<script>
+			$(document).bind('mobileinit',function(){
+			$.mobile.changePage.defaults.changeHash = false;
+			$.mobile.hashListeningEnabled = false;
+			$.mobile.pushStateEnabled = false;
+			});
+		</script>
 		<script src="http://ajax.googleapis.com/ajax/libs/jquerymobile/1.4.5/jquery.mobile.js"></script>
-		
-		<!--
-		<link rel="stylesheet" href="{$jqueryPath}/jquery.mobile.icons.min.css"/>
-		<link rel="stylesheet" href="{$jqueryPath}/jquery.mobile.structure.min.css"/>
-		<script src="{$jqueryPath}/jquery.min.js"/>
-		<script src="{$jqueryPath}/jquery.mobile.min.js"/>
-		-->
+
 	</xsl:template>
 	
 	<!-- Report controls-->

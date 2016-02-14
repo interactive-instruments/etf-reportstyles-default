@@ -39,11 +39,11 @@
         <xsl:choose>
             <xsl:when test="$cssDirectInlcuding ='true'">
                 <style type="text/css">
-                    <xsl:value-of select="document(concat($stylePath,'/de.interactive-instruments.min.css'))" disable-output-escaping="yes" />
+                    <xsl:value-of select="document('style/de.interactive-instruments.min.css')" disable-output-escaping="yes" />
                 </style>
                 
                 <style type="text/css">
-                    <xsl:value-of select="document(concat($stylePath,'/de.interactive-instruments.rep.css'))" disable-output-escaping="yes" />
+                    <xsl:value-of select="document('style/de.interactive-instruments.rep.css')" disable-output-escaping="yes" />
                 </style>
             </xsl:when>
             <xsl:otherwise>

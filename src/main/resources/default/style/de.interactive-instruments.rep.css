@@ -1,15 +1,15 @@
-
+<!--/*--><root><![CDATA[<!--*/-->
 #rprtStatistics table {
 }
 
 #rprtStatistics td:not(:first-child) {
-    text-align:center; 
+    text-align:center;
     vertical-align:middle;
 }
 
-td:first-child { 
-    text-align:left; 
-    font-weight:bold; 
+td:first-child {
+    text-align:left;
+    font-weight:bold;
 }
 
 
@@ -21,15 +21,15 @@ td:first-child {
 
 }
 
-#rprtAdditionalStatistics td:first-child { 
-    text-align:left; 
+#rprtAdditionalStatistics td:first-child {
+    text-align:left;
     font-weight:normal;
 }
 
-#rprtAdditionalStatistics td,th { 
-    text-align:left; 
+#rprtAdditionalStatistics td,th {
+    text-align:left;
 }
-#rprtAdditionalStatistics td { 
+#rprtAdditionalStatistics td {
     font-weight:normal;
 }
 
@@ -67,7 +67,7 @@ td:first-child {
 }
 
 .UrlReferenceContainer a {
-    
+
 }
 
 .RequirementTH {
@@ -79,7 +79,13 @@ td:first-child {
     background-color: #e63531 !important;
 }
 
+.ui-header .ui-title {
+    overflow:auto !important;
+    white-space:normal !important;
+}
+
 .AssertionsContainer {
     padding-top: 15px;
     padding-bottom: 30px;
 }
+<!--/*-->]]></root><!--*/-->

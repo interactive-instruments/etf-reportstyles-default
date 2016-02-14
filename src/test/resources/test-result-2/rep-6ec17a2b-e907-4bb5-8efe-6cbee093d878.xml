@@ -5,7 +5,7 @@
    <etf:ResultStatus>OK</etf:ResultStatus>
    <etf:Duration>50148</etf:Duration>
    <etf:StartTimestamp>2016-02-10T05:07:19.787+01:00</etf:StartTimestamp>
-   <etf:Label>Test run on 10.02.2016 - 05:07 with webservice Cite Simple Demo</etf:Label>
+   <etf:Label>Test run on 10.02.2016 - 05:07 with webservice Cite Simple Demo - eeeeeeeeeeeeeeeeeeeeeeeeeeextra long label!</etf:Label>
    <etf:AppendixLocation>http://localhost:8080/reports/6ec17a2b-e907-4bb5-8efe-6cbee093d878/appendices/</etf:AppendixLocation>
    <etf:MachineName>jax.herrmann.cx</etf:MachineName>
    <etf:PublicationLocation>file:/Users/USER/Projects/etf-local/env1/ds/obj/rep-6ec17a2b-e907-4bb5-8efe-6cbee093d878.xml</etf:PublicationLocation>

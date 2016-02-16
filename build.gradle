@@ -66,6 +66,14 @@ def normalizePath(def path) {
 	return modified
 }
 
+license {
+    excludes([
+            "**/*.xsl",
+            "**/*.xml",
+            "**/*.css",
+    ])
+}
+
 jar {
    baseName = 'etf-reportstyle-default'
    from('src/main/resources/default') {

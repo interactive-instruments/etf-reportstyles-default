@@ -14,7 +14,7 @@
                         <scenarioAssociation-array>
                             <scenarioAssociation>
                                 <field name="url">
-                                    <String>src/test/resources/test-result-1/rep-56dea49a-a4e3-4c08-905d-89b3cd62a827.xml</String>
+                                    <String>src/test/resources/test-result-2/rep-6ec17a2b-e907-4bb5-8efe-6cbee093d878.xml</String>
                                 </field>
                                 <field name="scenarioIds">
                                     <list>
@@ -29,7 +29,7 @@
                             </scenarioAssociation>
                             <scenarioAssociation>
                                 <field name="url">
-                                    <String>src/test/resources/test-result-2/rep-6ec17a2b-e907-4bb5-8efe-6cbee093d878.xml</String>
+                                    <String>src/test/resources/test-result-1/rep-56dea49a-a4e3-4c08-905d-89b3cd62a827.xml</String>
                                 </field>
                                 <field name="scenarioIds">
                                     <list>

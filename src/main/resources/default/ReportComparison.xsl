@@ -73,6 +73,7 @@
     <xsl:template match="diff">
         <html>
             <head>
+                <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
                 <title>Statistikvergleich</title>
                 <xsl:call-template name="jsfdeclAndCss"/>
             </head>

@@ -73,6 +73,7 @@
  <xsl:template match="/etf:TestReport">
   <html>
    <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
     <title>
      <xsl:value-of select="$lang/x:e[@key = 'Title']"/>
     </title>

@@ -3,6 +3,7 @@
 // ETF-ReportStyle
 //
 ///////////////////////////////////////////////////////////////////////////////////////
+
 buildscript {
     repositories {
         maven {
@@ -11,21 +12,16 @@ buildscript {
                 username 'ii-bda'
                 password '6ozhS683'
             }}
-        maven {
-            url "https://plugins.gradle.org/m2/"
-        }
-        jcenter()
     }
     dependencies {
-        classpath group: 'de.interactive_instruments.bda', name: 'etf-bda', version:'1.0.+'
-        classpath 'net.researchgate:gradle-release:2.3.4'
-        classpath "gradle.plugin.nl.javadude.gradle.plugins:license-gradle-plugin:0.12.1"
+        classpath group: 'de.interactive_instruments.bda', name: 'etf-bda', version:'1.0.19'
     }
     dependencies {
         ant.unjar src: configurations.classpath.files.find {it.path.contains('etf')}, dest: 'build/gradle'
     }
 }
 apply from: 'build/gradle/ii-bda.gradle'
+
 ///////////////////////////////////////////////////////////////////////////////////////
 
 
@@ -64,14 +60,6 @@ def normalizePath(def path) {
 	// META-INF\resources\webjars\jquery-mobile\1.4.5\*.* -> *.*
 	def modified=path.replaceAll('META-INF/resources/webjars/[^/]*/[^/]*/(.*)', {"${it[1]}"})
 	return modified
-}
-
-license {
-    excludes([
-            "**/*.xsl",
-            "**/*.xml",
-            "**/*.css",
-    ])
 }
 
 jar {

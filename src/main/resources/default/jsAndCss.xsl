@@ -146,8 +146,8 @@
 			});
 			
 			$( document ).ready(function() {
-			$( ".ReportDetail" ).hide();
-			$('.DoNotShowInSimpleView').hide();
+				$( ".ReportDetail" ).hide();
+				$('.DoNotShowInSimpleView').hide();
 			});
 			
 		</script>
